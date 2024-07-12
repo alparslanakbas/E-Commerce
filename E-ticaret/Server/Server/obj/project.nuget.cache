@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Fi7TNODusQ9keWM+PJA1Vvul9LPDpRNVntkuj2+BaSlkHbfDDaHuaXjwgUV9fjZtVTOaDeuJ6aQMOzT25SAsaQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Server\\Server.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\legol\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512"
+  ],
+  "logs": []
+}
