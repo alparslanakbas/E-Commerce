@@ -17,7 +17,6 @@ RUN npm run build
 FROM nginx:alpine
 
 # Copy the build output to replace the default NGINX static files
-# COPY ./nginx.conf / etc/nginx/conf.d/default.conf
 COPY --from=build /app/dist/client/browser /usr/share/nginx/html
 
 # Expose port 80
