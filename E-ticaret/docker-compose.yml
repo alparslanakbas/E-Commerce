@@ -3,7 +3,7 @@ version: '3.9'
 services:
   db:
     image: postgres
-    container_name: PostgreSQL
+    container_name: PostgreSql
     restart: always
     shm_size: 128mb
     environment:
@@ -24,10 +24,23 @@ services:
 
   adminer:
     image: adminer
-    container_name: my_adminer
+    container_name: AdminerDbControl
     restart: always
     ports:
       - 8080:8080
+    networks:
+      - mynetwork
+    depends_on:
+      - db
+
+  client:
+    build:
+      context: ./Client
+      dockerfile: Dockerfile
+    container_name: AngularUI
+    restart: always
+    ports:
+      - 4200:80
     networks:
       - mynetwork
     depends_on:
