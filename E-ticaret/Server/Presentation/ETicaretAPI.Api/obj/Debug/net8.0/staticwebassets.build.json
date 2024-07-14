@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "jURHjL3SweLZ6nCCcshjIWIvBdbT8Dp7SHAPMiVpqB0=",
+  "Source": "ETicaretAPI.Api",
+  "BasePath": "_content/ETicaretAPI.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
