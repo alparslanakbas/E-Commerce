@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Kkc2lv1bNFIiHvNMypBZmojUvcTLDI5EbaCCCJX0ru9yaMAbvfoLCfMl7pTnyfZDYs6Ae0SrfqKX+D4RB6ssqg==",
+  "dgSpecHash": "HkY1/jqqdzxW2IDUPHbciLL6TL8MMWOGVz8iGQUHtWCSWfapJ2HnrNJRfU41eb4DuZT1V2Del98bdpWbQ38ECw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
+  "projectFilePath": "c:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

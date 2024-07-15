@@ -1,0 +1,16 @@
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Application\bin\Debug\net8.0\ETicaretAPI.Application.deps.json
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Application\bin\Debug\net8.0\ETicaretAPI.Application.dll
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Application\bin\Debug\net8.0\ETicaretAPI.Application.pdb
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Application\bin\Debug\net8.0\ETicaretAPI.Domain.dll
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Application\bin\Debug\net8.0\ETicaretAPI.Domain.pdb
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Application\obj\Debug\net8.0\ETicaretAPI.Application.csproj.AssemblyReference.cache
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Application\obj\Debug\net8.0\ETicaretAPI.Application.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Application\obj\Debug\net8.0\ETicaretAPI.Application.AssemblyInfoInputs.cache
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Application\obj\Debug\net8.0\ETicaretAPI.Application.AssemblyInfo.cs
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Application\obj\Debug\net8.0\ETicaretAPI.Application.csproj.CoreCompileInputs.cache
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Application\obj\Debug\net8.0\ETicaretAPI.Application.sourcelink.json
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Application\obj\Debug\net8.0\ETicaret.BBAD6852.Up2Date
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Application\obj\Debug\net8.0\ETicaretAPI.Application.dll
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Application\obj\Debug\net8.0\refint\ETicaretAPI.Application.dll
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Application\obj\Debug\net8.0\ETicaretAPI.Application.pdb
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Application\obj\Debug\net8.0\ref\ETicaretAPI.Application.dll

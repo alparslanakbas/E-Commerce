@@ -1,0 +1,12 @@
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\bin\Debug\net8.0\ETicaretAPI.Domain.deps.json
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\bin\Debug\net8.0\ETicaretAPI.Domain.dll
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\bin\Debug\net8.0\ETicaretAPI.Domain.pdb
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ETicaretAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ETicaretAPI.Domain.AssemblyInfoInputs.cache
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ETicaretAPI.Domain.AssemblyInfo.cs
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ETicaretAPI.Domain.csproj.CoreCompileInputs.cache
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ETicaretAPI.Domain.sourcelink.json
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ETicaretAPI.Domain.dll
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\refint\ETicaretAPI.Domain.dll
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ETicaretAPI.Domain.pdb
+c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ref\ETicaretAPI.Domain.dll

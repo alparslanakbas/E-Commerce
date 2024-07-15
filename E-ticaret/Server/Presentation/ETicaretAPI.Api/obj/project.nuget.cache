@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "K+A89BUMfim5HPfTMfeajyTFN+RUmtFLdW2InuMBRV/plDFIlqspMH/Qk813ToAxudP/B4rrY62iCp+AMdKPmg==",
+  "dgSpecHash": "R3dVGP+VU6K0phDhQd85uR+29rS9FQvy3gcnHGDtJYtBiVypNp6F7TcKQppJmEfTpiEMVJNCy2Wh0n/Jx0/nLg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Presentation\\ETicaretAPI.Api\\ETicaretAPI.Api.csproj",
+  "projectFilePath": "c:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Presentation\\ETicaretAPI.Api\\ETicaretAPI.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\legol\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
