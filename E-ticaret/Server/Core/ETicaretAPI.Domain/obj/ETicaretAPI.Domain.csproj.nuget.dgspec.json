@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj": {}
+    "C:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj": {}
   },
   "projects": {
-    "c:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj": {
+    "C:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
         "projectName": "ETicaretAPI.Domain",
-        "projectPath": "c:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
+        "projectPath": "C:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj",
         "packagesPath": "C:\\Users\\legol\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\obj\\",
+        "outputPath": "C:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

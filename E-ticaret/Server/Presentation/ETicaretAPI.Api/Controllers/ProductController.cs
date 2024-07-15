@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ETicaretAPI.Application.Abstractions;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ETicaretAPI.Api.Controllers
@@ -12,14 +13,15 @@ namespace ETicaretAPI.Api.Controllers
     {
         private readonly IProductService _productService;
 
-        public ProductController(IIProductService productService)
+        public ProductController(IProductService productService)
         {
             _productService = productService;
         }
 
+        [HttpGet]
         public IActionResult GetAll()
         {
-            var products = _productService.GetAll();
+            var products = _productService.GetProducts();
             return Ok(products);
         }
     }

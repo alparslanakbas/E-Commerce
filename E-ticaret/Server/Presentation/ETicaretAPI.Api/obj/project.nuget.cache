@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "R3dVGP+VU6K0phDhQd85uR+29rS9FQvy3gcnHGDtJYtBiVypNp6F7TcKQppJmEfTpiEMVJNCy2Wh0n/Jx0/nLg==",
+  "dgSpecHash": "NVur0kPOutMNAqW2LlnK10p0qNuuoRpO8SnkpqRkkISX0oDnXnuU6THuJhcQPESuyLk9IQaCLytiAs1NqtZKQA==",
   "success": true,
-  "projectFilePath": "c:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Presentation\\ETicaretAPI.Api\\ETicaretAPI.Api.csproj",
+  "projectFilePath": "C:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Presentation\\ETicaretAPI.Api\\ETicaretAPI.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\legol\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\legol\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
