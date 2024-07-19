@@ -1,10 +1,16 @@
+using Autofac.Extensions.DependencyInjection;
+using Autofac;
 using ETicaretAPI.Persistence;
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-IConfigurationSection configurationSection = builder.Configuration.GetSection("MySection");
-builder.Services.AddPersistenceServices(configurationSection);
+// Autofac konfigurasyonu
+builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
+builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
+{
+    containerBuilder.RegisterModule(new AutofacModule());
+});
 
 // Add services to the container.
 
@@ -15,6 +21,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

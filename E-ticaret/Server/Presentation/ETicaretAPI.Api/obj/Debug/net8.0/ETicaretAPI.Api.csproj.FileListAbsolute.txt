@@ -111,3 +111,5 @@ C:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Presentation\ETic
 C:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Presentation\ETicaretAPI.Api\bin\Debug\net8.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Presentation\ETicaretAPI.Api\bin\Debug\net8.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Presentation\ETicaretAPI.Api\bin\Debug\net8.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
+C:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Presentation\ETicaretAPI.Api\bin\Debug\net8.0\Autofac.dll
+C:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Presentation\ETicaretAPI.Api\bin\Debug\net8.0\Autofac.Extensions.DependencyInjection.dll

@@ -3,36 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0F2CD803-20F2-426F-9371-8E5692B9120F}|Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj|c:\\users\\legol\\onedrive\\masa\u00FCst\u00FC\\e-commerce\\e-ticaret\\server\\infrastructure\\eticaretapi.persistence\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F2CD803-20F2-426F-9371-8E5692B9120F}|Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj|solutionrelative:infrastructure\\eticaretapi.persistence\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65135E41-CF70-41C5-B385-C35135E43567}|Presentation\\ETicaretAPI.Api\\ETicaretAPI.Api.csproj|c:\\users\\legol\\onedrive\\masa\u00FCst\u00FC\\e-commerce\\e-ticaret\\server\\presentation\\eticaretapi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{65135E41-CF70-41C5-B385-C35135E43567}|Presentation\\ETicaretAPI.Api\\ETicaretAPI.Api.csproj|solutionrelative:presentation\\eticaretapi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65135E41-CF70-41C5-B385-C35135E43567}|Presentation\\ETicaretAPI.Api\\ETicaretAPI.Api.csproj|c:\\users\\legol\\onedrive\\masa\u00FCst\u00FC\\e-commerce\\e-ticaret\\server\\presentation\\eticaretapi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65135E41-CF70-41C5-B385-C35135E43567}|Presentation\\ETicaretAPI.Api\\ETicaretAPI.Api.csproj|solutionrelative:presentation\\eticaretapi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F12D9395-3963-4D48-91F5-380C9D63D3DF}|Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj|c:\\users\\legol\\onedrive\\masa\u00FCst\u00FC\\e-commerce\\e-ticaret\\server\\core\\eticaretapi.domain\\entities\\common\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F12D9395-3963-4D48-91F5-380C9D63D3DF}|Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj|solutionrelative:core\\eticaretapi.domain\\entities\\common\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F12D9395-3963-4D48-91F5-380C9D63D3DF}|Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj|c:\\users\\legol\\onedrive\\masa\u00FCst\u00FC\\e-commerce\\e-ticaret\\server\\core\\eticaretapi.domain\\entities\\common\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F12D9395-3963-4D48-91F5-380C9D63D3DF}|Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj|solutionrelative:core\\eticaretapi.domain\\entities\\common\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F12D9395-3963-4D48-91F5-380C9D63D3DF}|Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj|c:\\users\\legol\\onedrive\\masa\u00FCst\u00FC\\e-commerce\\e-ticaret\\server\\core\\eticaretapi.domain\\entities\\common\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F12D9395-3963-4D48-91F5-380C9D63D3DF}|Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj|solutionrelative:core\\eticaretapi.domain\\entities\\common\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F2CD803-20F2-426F-9371-8E5692B9120F}|Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj|c:\\users\\legol\\onedrive\\masa\u00FCst\u00FC\\e-commerce\\e-ticaret\\server\\infrastructure\\eticaretapi.persistence\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F2CD803-20F2-426F-9371-8E5692B9120F}|Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj|solutionrelative:infrastructure\\eticaretapi.persistence\\context\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F12D9395-3963-4D48-91F5-380C9D63D3DF}|Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj|c:\\users\\legol\\onedrive\\masa\u00FCst\u00FC\\e-commerce\\e-ticaret\\server\\core\\eticaretapi.domain\\entities\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F12D9395-3963-4D48-91F5-380C9D63D3DF}|Core\\ETicaretAPI.Domain\\ETicaretAPI.Domain.csproj|solutionrelative:core\\eticaretapi.domain\\entities\\common\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0F2CD803-20F2-426F-9371-8E5692B9120F}|Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj|c:\\users\\legol\\onedrive\\masa\u00FCst\u00FC\\e-commerce\\e-ticaret\\server\\infrastructure\\eticaretapi.persistence\\autofacmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F2CD803-20F2-426F-9371-8E5692B9120F}|Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj|solutionrelative:infrastructure\\eticaretapi.persistence\\autofacmodule.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,106 +22,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Presentation\\ETicaretAPI.Api\\appsettings.json",
-              "RelativeDocumentMoniker": "Presentation\\ETicaretAPI.Api\\appsettings.json",
-              "ToolTip": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Presentation\\ETicaretAPI.Api\\appsettings.json",
-              "RelativeToolTip": "Presentation\\ETicaretAPI.Api\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-07-16T18:57:00.548Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ServiceRegistration.cs",
-              "DocumentMoniker": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Infrastructure\\ETicaretAPI.Persistence\\ServiceRegistration.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\ETicaretAPI.Persistence\\ServiceRegistration.cs",
-              "ToolTip": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Infrastructure\\ETicaretAPI.Persistence\\ServiceRegistration.cs",
-              "RelativeToolTip": "Infrastructure\\ETicaretAPI.Persistence\\ServiceRegistration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Title": "AutofacModule.cs",
+              "DocumentMoniker": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Infrastructure\\ETicaretAPI.Persistence\\AutofacModule.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\ETicaretAPI.Persistence\\AutofacModule.cs",
+              "ToolTip": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Infrastructure\\ETicaretAPI.Persistence\\AutofacModule.cs",
+              "RelativeToolTip": "Infrastructure\\ETicaretAPI.Persistence\\AutofacModule.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAQwCAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T17:48:43.973Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Presentation\\ETicaretAPI.Api\\Program.cs",
-              "RelativeDocumentMoniker": "Presentation\\ETicaretAPI.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Presentation\\ETicaretAPI.Api\\Program.cs",
-              "RelativeToolTip": "Presentation\\ETicaretAPI.Api\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T17:47:20.837Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "AppDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Infrastructure\\ETicaretAPI.Persistence\\Context\\AppDbContext.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\ETicaretAPI.Persistence\\Context\\AppDbContext.cs",
-              "ToolTip": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Infrastructure\\ETicaretAPI.Persistence\\Context\\AppDbContext.cs",
-              "RelativeToolTip": "Infrastructure\\ETicaretAPI.Persistence\\Context\\AppDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T17:42:20.373Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Product.cs",
-              "DocumentMoniker": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\Entities\\Common\\Product.cs",
-              "RelativeDocumentMoniker": "Core\\ETicaretAPI.Domain\\Entities\\Common\\Product.cs",
-              "ToolTip": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\Entities\\Common\\Product.cs",
-              "RelativeToolTip": "Core\\ETicaretAPI.Domain\\Entities\\Common\\Product.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T17:25:28.336Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "BaseEntity.cs",
-              "DocumentMoniker": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\Entities\\Common\\BaseEntity.cs",
-              "RelativeDocumentMoniker": "Core\\ETicaretAPI.Domain\\Entities\\Common\\BaseEntity.cs",
-              "ToolTip": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\Entities\\Common\\BaseEntity.cs",
-              "RelativeToolTip": "Core\\ETicaretAPI.Domain\\Entities\\Common\\BaseEntity.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T17:25:16.146Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Customer.cs",
-              "DocumentMoniker": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\Entities\\Common\\Customer.cs",
-              "RelativeDocumentMoniker": "Core\\ETicaretAPI.Domain\\Entities\\Common\\Customer.cs",
-              "ToolTip": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\Entities\\Common\\Customer.cs",
-              "RelativeToolTip": "Core\\ETicaretAPI.Domain\\Entities\\Common\\Customer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T17:24:46.497Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Order.cs",
-              "DocumentMoniker": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\Entities\\Common\\Order.cs",
-              "RelativeDocumentMoniker": "Core\\ETicaretAPI.Domain\\Entities\\Common\\Order.cs",
-              "ToolTip": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Domain\\Entities\\Common\\Order.cs",
-              "RelativeToolTip": "Core\\ETicaretAPI.Domain\\Entities\\Common\\Order.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAqwA8AAAABAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-16T17:24:42.294Z",
+              "WhenOpened": "2024-07-19T20:28:28.802Z",
               "EditorCaption": ""
             }
           ]
