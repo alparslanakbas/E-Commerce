@@ -11,6 +11,7 @@ namespace ETicaretAPI.Domain.Entities.Common
         public string? Description { get; init; }
         public required string Address { get; init; }
         public required ICollection<Product> Products { get; init; }
-        public required Customer Customer { get; init; } 
+        public required Customer Customer { get; init; }
+        public Guid CustomerId { get; set; }
     }
 }

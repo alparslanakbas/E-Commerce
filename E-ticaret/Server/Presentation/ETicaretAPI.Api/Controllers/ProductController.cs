@@ -21,17 +21,17 @@ namespace ETicaretAPI.Api.Controllers
             _writeProductRepo = writeProductRepo;
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Add(Product productt)
-        {
-            var product = await _writeProductRepo.AddAsync(productt);
-            return Ok(product);
-        }
-
         [HttpGet]
         public async Task Get()
         {
-           Product p = await _readProductRepo.GetByIdAsync("");
+            await _writeProductRepo.AddAsync(new()
+            {
+                Name = "Laptop Casper Nirvana",
+                Price = 1.500F,
+                Stock = 10
+            });
+
+            await _writeProductRepo.SaveAsync();
         }
 
         [HttpGet("{id}")]

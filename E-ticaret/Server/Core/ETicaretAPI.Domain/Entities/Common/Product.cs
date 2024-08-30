@@ -9,7 +9,7 @@ namespace ETicaretAPI.Domain.Entities.Common
     {
         public string Name { get; init; } = null!;
         public int Stock { get; init; }
-        public long Price { get; init; }
+        public float Price { get; init; }
         public ICollection<Order>? Orders { get; init; }
     }
 }
