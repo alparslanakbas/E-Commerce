@@ -50,8 +50,7 @@
               "RelativeToolTip": "Core\\ETicaretAPI.Domain\\Entities\\Common\\Product.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T15:54:54.378Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T15:54:54.378Z"
             },
             {
               "$type": "Document",
@@ -76,8 +75,7 @@
               "RelativeToolTip": "Core\\ETicaretAPI.Domain\\Entities\\Common\\Customer.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T15:54:44.574Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T15:54:44.574Z"
             },
             {
               "$type": "Document",
@@ -89,8 +87,7 @@
               "RelativeToolTip": "Infrastructure\\ETicaretAPI.Persistence\\Context\\AppDbContext.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAAFAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T15:30:12.878Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T15:30:12.878Z"
             },
             {
               "$type": "Document",
@@ -102,8 +99,7 @@
               "RelativeToolTip": "Core\\ETicaretAPI.Domain\\Entities\\Common\\BaseEntity.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:31:31.021Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T14:31:31.021Z"
             },
             {
               "$type": "Document",
@@ -115,8 +111,7 @@
               "RelativeToolTip": "Presentation\\ETicaretAPI.Api\\Controllers\\ProductController.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-30T14:02:34.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-08-30T14:02:34.791Z"
             }
           ]
         }

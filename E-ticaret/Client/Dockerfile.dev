@@ -1,0 +1,18 @@
+# Development için Dockerfile
+
+FROM node:18
+
+WORKDIR /app
+
+# Angular CLI'yi global olarak yükleyin
+RUN npm install -g @angular/cli
+
+# Dependencies yükleniyor
+COPY package.json yarn.lock ./
+RUN yarn install
+
+# Uygulama kodunu kopyalıyoruz
+COPY . .
+
+# Angular uygulamasını başlatıyoruz
+CMD ["ng", "serve", "--host", "0.0.0.0", "--poll=2000"]

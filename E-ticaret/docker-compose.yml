@@ -43,8 +43,10 @@ services:
       - 4200:80
     networks:
       - mynetwork
-    depends_on:
-      - db
+    volumes:
+      - ./client:/app  
+      - /app/node_modules  
+    command: ["ng", "serve", "--host", "0.0.0.0", "--poll=2000"]
 
 volumes:
   db_data:

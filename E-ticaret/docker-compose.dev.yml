@@ -1,0 +1,54 @@
+version: '3.9'
+
+services:
+  db:
+    image: postgres
+    container_name: PostgreSql
+    restart: always
+    shm_size: 128mb
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_USER: myuser
+      POSTGRES_DB: mydatabase
+    ports:
+      - 5432:5432
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - mynetwork
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U myuser"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+
+  adminer:
+    image: adminer
+    container_name: AdminerDbControl
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - mynetwork
+    depends_on:
+      - db
+
+  client:
+    build:
+      context: ./Client
+      dockerfile: Dockerfile.dev  # Development için Dockerfile.dev kullanılıyor
+    container_name: AngularUI
+    restart: always
+    ports:
+      - 4200:4200  # Angular'ın geliştirme sırasında dinlediği port
+    networks:
+      - mynetwork
+    volumes:
+      - ./client:/app  # Yerel dosya sistemini container'a bağlar
+      - /app/node_modules  # node_modules klasörünü hariç tut
+
+volumes:
+  db_data:
+
+networks:
+  mynetwork:

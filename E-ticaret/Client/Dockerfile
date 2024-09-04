@@ -3,21 +3,24 @@ FROM node:18 as build
 
 WORKDIR /app
 
-# Install dependencies
-COPY package.json package-lock.json ./
-RUN npm install
+# Angular CLI'yi yükleyin
+RUN npm install -g @angular/cli
 
-# Copy the rest of the application code
+# Dependencies yükleniyor
+COPY package.json yarn.lock ./
+RUN yarn install
+
+# Uygulama kodunu kopyalıyoruz
 COPY . .
 
 # Build the application
-RUN npm run build
+RUN yarn build
 
 # Stage 2: Serve the application with NGINX
 FROM nginx:alpine
 
 # Copy the build output to replace the default NGINX static files
-COPY --from=build /app/dist/client/browser /usr/share/nginx/html
+COPY --from=build /app/dist /usr/share/nginx/html
 
 # Expose port 80
 EXPOSE 80
