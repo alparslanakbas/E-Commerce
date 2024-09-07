@@ -171,5 +171,10 @@
     "notification": "Notificación",
     "read_all_notification": "Leer todas las notificaciones",
     "inbox": "Bandeja de entrada",
-    "sign_out": "Cerrar sesión"
+    "sign_out": "Cerrar sesión",
+    "customer": "Cliente",
+    "order": "Pedido",
+    "product": "Producto",
+    "add_new": "Agregar nuevo",
+    "delete": "Eliminar"
 }

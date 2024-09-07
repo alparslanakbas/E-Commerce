@@ -171,5 +171,10 @@
     "notification": "通知",
     "read_all_notification": "阅读所有通知",
     "inbox": "收件箱",
-    "sign_out": "登出"
+    "sign_out": "登出",
+    "customer": "客户",
+    "order": "订单",
+    "product": "产品",
+    "add_new": "新增",
+    "delete": "删除"
 }

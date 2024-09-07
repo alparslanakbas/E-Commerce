@@ -171,5 +171,10 @@
     "notification": "通知",
     "read_all_notification": "すべての通知を読む",
     "inbox": "受信トレイ",
-    "sign_out": "サインアウト"
+    "sign_out": "サインアウト",
+    "customer": "顧客",
+    "order": "注文",
+    "product": "製品",
+    "add_new": "新規追加",
+    "delete": "削除"
 }

@@ -171,5 +171,10 @@
     "notification": "Értesítés",
     "read_all_notification": "Olvassa el az összes értesítést",
     "inbox": "Bejövő üzenetek",
-    "sign_out": "Kijelentkezés"
+    "sign_out": "Kijelentkezés",
+    "customer": "Vásárló",
+    "order": "Rendelés",
+    "product": "Termék",
+    "add_new": "Új hozzáadása",
+    "delete": "Törlés"
 }

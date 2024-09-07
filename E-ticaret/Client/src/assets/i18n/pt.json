@@ -171,5 +171,10 @@
     "notification": "Notificação",
     "read_all_notification": "Ler todas as notificações",
     "inbox": "Caixa de entrada",
-    "sign_out": "Sair"
+    "sign_out": "Sair",
+    "customer": "Cliente",
+    "order": "Pedido",
+    "product": "Produto",
+    "add_new": "Adicionar novo",
+    "delete": "Excluir"
 }

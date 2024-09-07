@@ -171,5 +171,10 @@
     "notification": "Уведомление",
     "read_all_notification": "Прочитать все уведомления",
     "inbox": "Входящие",
-    "sign_out": "Выйти"
+    "sign_out": "Выйти",
+    "customer": "Клиент",
+    "order": "Заказ",
+    "product": "Продукт",
+    "add_new": "Добавить новое",
+    "delete": "Удалить"
 }

@@ -171,5 +171,10 @@
     "notification": "إشعار",
     "read_all_notification": "قراءة جميع الإشعارات",
     "inbox": "صندوق الوارد",
-    "sign_out": "تسجيل الخروج"
+    "sign_out": "تسجيل الخروج",
+    "customer": "عميل",
+    "order": "طلب",
+    "product": "منتج",
+    "add_new": "إضافة جديد",
+    "delete": "حذف"
 }

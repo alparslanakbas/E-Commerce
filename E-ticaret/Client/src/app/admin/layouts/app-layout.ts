@@ -1,19 +1,22 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { AppService } from '../service/app.service';
+import { AppService } from '../../service/app.service';
+import { Router, NavigationEnd, Event as RouterEvent } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-root',
-    templateUrl: './auth-layout.html',
+    templateUrl: './app-layout.html',
 })
-export class AuthLayout {
+export class AppLayout {
     store: any;
     showTopButton = false;
-    constructor(public storeData: Store<any>, private service: AppService) {
+    constructor(public translate: TranslateService, public storeData: Store<any>, private service: AppService, private router: Router) {
         this.initStore();
     }
     headerClass = '';
     ngOnInit() {
+        this.initAnimation();
         this.toggleLoader();
         window.addEventListener('scroll', () => {
             if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -24,15 +27,29 @@ export class AuthLayout {
         });
     }
 
+    ngOnDestroy() {
+        window.removeEventListener('scroll', () => {});
+    }
+
+    initAnimation() {
+        this.service.changeAnimation();
+        this.router.events.subscribe((event) => {
+            if (event instanceof NavigationEnd) {
+                this.service.changeAnimation();
+            }
+        });
+
+        const ele: any = document.querySelector('.animation');
+        ele.addEventListener('animationend', () => {
+            this.service.changeAnimation('remove');
+        });
+    }
+
     toggleLoader() {
         this.storeData.dispatch({ type: 'toggleMainLoader', payload: true });
         setTimeout(() => {
             this.storeData.dispatch({ type: 'toggleMainLoader', payload: false });
         }, 500);
-    }
-
-    ngOnDestroy() {
-        window.removeEventListener('scroll', () => {});
     }
 
     async initStore() {

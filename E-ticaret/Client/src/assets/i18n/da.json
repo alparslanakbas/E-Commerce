@@ -171,5 +171,10 @@
     "notification": "Notifikation",
     "read_all_notification": "Læs alle notifikationer",
     "inbox": "Indbakke",
-    "sign_out": "Log ud"
+    "sign_out": "Log ud",
+    "customer": "Kunde",
+    "order": "Bestilling",
+    "product": "Produkt",
+    "add_new": "Tilføj ny",
+    "delete": "Slet"
 }

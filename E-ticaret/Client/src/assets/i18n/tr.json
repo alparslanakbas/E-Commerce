@@ -171,5 +171,10 @@
     "notification": "Bildirim",
     "read_all_notification": "Tüm Bildirimleri Oku",
     "inbox": "Gelen Kutusu",
-    "sign_out": "Çıkış Yap"
+    "sign_out": "Çıkış Yap",
+    "customer": "Müşteri",
+    "order": "Sipariş",
+    "product": "Ürün",
+    "add_new": "Yeni Ekle",
+    "delete": "Sil"
 }

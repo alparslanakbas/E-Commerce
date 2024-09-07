@@ -171,5 +171,10 @@
     "notification": "Notifikation",
     "read_all_notification": "Läs alla notifikationer",
     "inbox": "Inkorg",
-    "sign_out": "Logga ut"
+    "sign_out": "Logga ut",
+    "customer": "Kund",
+    "order": "Beställning",
+    "product": "Produkt",
+    "add_new": "Lägg till ny",
+    "delete": "Radera"
 }

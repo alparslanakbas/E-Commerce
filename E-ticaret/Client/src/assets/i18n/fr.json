@@ -171,5 +171,10 @@
     "notification": "Notification",
     "read_all_notification": "Lire toutes les notifications",
     "inbox": "Boîte de réception",
-    "sign_out": "Déconnexion"
+    "sign_out": "Déconnexion",
+    "customer": "Client",
+    "order": "Commande",
+    "product": "Produit",
+    "add_new": "Ajouter nouveau",
+    "delete": "Supprimer"
 }

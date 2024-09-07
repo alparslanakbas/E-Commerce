@@ -1,7 +1,7 @@
 ﻿import { Component } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Router, NavigationEnd } from '@angular/router';
-import { AppService } from '../service/app.service';
+import { AppService } from '../../service/app.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 import { toggleAnimation } from 'src/app/shared/animations';

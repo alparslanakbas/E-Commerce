@@ -30,13 +30,17 @@ export function HttpLoaderFactory(httpHandler: HttpBackend): TranslateHttpLoader
 import { IndexComponent } from './index';
 
 // Layouts
-import { AppLayout } from './layouts/app-layout';
-import { AuthLayout } from './layouts/auth-layout';
+import { AppLayout } from './admin/layouts/app-layout';
+import { AuthLayout } from './admin/layouts/auth-layout';
 
-import { HeaderComponent } from './layouts/header';
-import { FooterComponent } from './layouts/footer';
-import { SidebarComponent } from './layouts/sidebar';
-import { ThemeCustomizerComponent } from './layouts/theme-customizer';
+import { HeaderComponent } from './admin/layouts/header';
+import { FooterComponent } from './admin/layouts/footer';
+import { SidebarComponent } from './admin/layouts/sidebar';
+import { ThemeCustomizerComponent } from './admin/layouts/theme-customizer';
+import { CustomerComponent } from './admin/layouts/components/customer/customer.component';
+import { ProductComponent } from './admin/layouts/components/product/product.component';
+import { OrderComponent } from './admin/layouts/components/order/order.component';
+import { DataTableModule } from '@bhplugin/ng-datatable';
 
 @NgModule({
     imports: [
@@ -46,6 +50,7 @@ import { ThemeCustomizerComponent } from './layouts/theme-customizer';
         CommonModule,
         FormsModule,
         HttpClientModule,
+        DataTableModule,
         TranslateModule.forRoot({
             loader: {
                 provide: TranslateLoader,
@@ -56,7 +61,19 @@ import { ThemeCustomizerComponent } from './layouts/theme-customizer';
         StoreModule.forRoot({ index: indexReducer }),
         SharedModule.forRoot(),
     ],
-    declarations: [AppComponent, HeaderComponent, FooterComponent, SidebarComponent, ThemeCustomizerComponent, IndexComponent, AppLayout, AuthLayout],
+    declarations: [
+        AppComponent, 
+        HeaderComponent, 
+        FooterComponent, 
+        SidebarComponent, 
+        ThemeCustomizerComponent, 
+        IndexComponent, 
+        AppLayout, 
+        AuthLayout,
+        CustomerComponent,
+        ProductComponent,
+        OrderComponent
+    ],
     providers: [Title],
     bootstrap: [AppComponent],
 })
