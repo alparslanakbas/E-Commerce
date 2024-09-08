@@ -176,5 +176,17 @@
     "order": "Bestilling",
     "product": "Produkt",
     "add_new": "Tilføj ny",
-    "delete": "Slet"
+    "delete": "Slet",
+    "loading": "Indlæser...",
+    "ALERT": 
+    {
+        "TITLE": "Er du sikker?",
+        "TEXT": "Du vil ikke kunne gendanne denne række!",
+        "CONFIRM": "Ja, slet det!",
+        "CANCEL": "Nej, behold det",
+        "SUCCESS_TITLE": "Slettet!",
+        "SUCCESS_TEXT": "Rækken er blevet slettet.",
+        "CANCELLED_TITLE": "Annulleret",
+        "CANCELLED_TEXT": "Dine data er sikre :)"
+    }
 }

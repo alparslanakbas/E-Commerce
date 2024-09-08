@@ -176,5 +176,17 @@
     "order": "Pedido",
     "product": "Produto",
     "add_new": "Adicionar novo",
-    "delete": "Excluir"
+    "delete": "Excluir",
+    "loading": "Carregando...",
+    "ALERT": 
+    {
+        "TITLE": "Você tem certeza?",
+        "TEXT": "Você não poderá recuperar esta linha!",
+        "CONFIRM": "Sim, exclua!",
+        "CANCEL": "Não, mantenha-o",
+        "SUCCESS_TITLE": "Excluído!",
+        "SUCCESS_TEXT": "A linha foi excluída.",
+        "CANCELLED_TITLE": "Cancelado",
+        "CANCELLED_TEXT": "Seus dados estão seguros :)"
+    }
 }

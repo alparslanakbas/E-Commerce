@@ -176,5 +176,17 @@
     "order": "Zamówienie",
     "product": "Produkt",
     "add_new": "Dodaj nowy",
-    "delete": "Usuń"
+    "delete": "Usuń",
+    "loading": "Ładowanie...",
+    "ALERT": 
+    {
+        "TITLE": "Jesteś pewien?",
+        "TEXT": "Nie będziesz mógł odzyskać tego wiersza!",
+        "CONFIRM": "Tak, usuń to!",
+        "CANCEL": "Nie, zachowaj to",
+        "SUCCESS_TITLE": "Usunięte!",
+        "SUCCESS_TEXT": "Wiersz został usunięty.",
+        "CANCELLED_TITLE": "Anulowano",
+        "CANCELLED_TEXT": "Twoje dane są bezpieczne :)"
+    }
 }

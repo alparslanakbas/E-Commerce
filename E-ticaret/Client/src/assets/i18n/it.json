@@ -176,5 +176,17 @@
     "order": "Ordine",
     "product": "Prodotto",
     "add_new": "Aggiungi nuovo",
-    "delete": "Elimina"
+    "delete": "Elimina",
+    "loading": "Caricamento...",
+    "ALERT": 
+    {
+        "TITLE": "Sei sicuro?",
+        "TEXT": "Non potrai recuperare questa riga!",
+        "CONFIRM": "Sì, cancellalo!",
+        "CANCEL": "No, mantienilo",
+        "SUCCESS_TITLE": "Cancellato!",
+        "SUCCESS_TEXT": "La riga è stata cancellata.",
+        "CANCELLED_TITLE": "Annullato",
+        "CANCELLED_TEXT": "I tuoi dati sono al sicuro :)"
+    }
 }

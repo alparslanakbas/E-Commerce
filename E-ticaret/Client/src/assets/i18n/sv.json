@@ -176,5 +176,17 @@
     "order": "Beställning",
     "product": "Produkt",
     "add_new": "Lägg till ny",
-    "delete": "Radera"
+    "delete": "Radera",
+    "loading": "Laddar...",
+    "ALERT": 
+    {
+        "TITLE": "Är du säker?",
+        "TEXT": "Du kommer inte kunna återställa den här raden!",
+        "CONFIRM": "Ja, ta bort det!",
+        "CANCEL": "Nej, behåll det",
+        "SUCCESS_TITLE": "Raderad!",
+        "SUCCESS_TEXT": "Raden har raderats.",
+        "CANCELLED_TITLE": "Avbruten",
+        "CANCELLED_TEXT": "Dina data är säkra :)"
+    }
 }

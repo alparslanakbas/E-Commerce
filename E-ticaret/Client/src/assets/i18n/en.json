@@ -176,5 +176,17 @@
     "order": "Order",
     "product": "Product",
     "add_new": "Add New",
-    "delete": "Delete"
+    "delete": "Delete",
+    "loading": "Loading...",
+    "ALERT": 
+    {
+        "TITLE": "Are you sure?",
+        "TEXT": "You will not be able to recover this row!",
+        "CONFIRM": "Yes, delete it!",
+        "CANCEL": "No, keep it",
+        "SUCCESS_TITLE": "Deleted!",
+        "SUCCESS_TEXT": "The row has been deleted.",
+        "CANCELLED_TITLE": "Cancelled",
+        "CANCELLED_TEXT": "Your data is safe :)"
+    }
 }

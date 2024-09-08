@@ -176,5 +176,17 @@
     "order": "Rendelés",
     "product": "Termék",
     "add_new": "Új hozzáadása",
-    "delete": "Törlés"
+    "delete": "Törlés",
+    "loading": "Betöltés...",
+    "ALERT": 
+    {
+        "TITLE": "Biztos vagy benne?",
+        "TEXT": "Nem fogod tudni visszaállítani ezt a sort!",
+        "CONFIRM": "Igen, töröld!",
+        "CANCEL": "Nem, tartsd meg",
+        "SUCCESS_TITLE": "Törölve!",
+        "SUCCESS_TEXT": "A sor törölve lett.",
+        "CANCELLED_TITLE": "Megszakítva",
+        "CANCELLED_TEXT": "Az adataid biztonságban vannak :)"
+    }
 }

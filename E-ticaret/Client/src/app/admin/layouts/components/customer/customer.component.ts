@@ -1,29 +1,40 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-customer',
-  templateUrl: './customer.component.html',
-  styleUrls: ['./customer.component.css']
+    selector: 'app-customer',
+    templateUrl: './customer.component.html',
+    styleUrls: ['./customer.component.css'],
 })
 export class CustomerComponent implements OnInit {
+    currentPath: string | undefined;
+    loading : boolean = false;
 
-  currentPath: string | undefined;
+    constructor(
+        private route: ActivatedRoute,
+        private translate: TranslateService,
+    ) {}
 
-  constructor(private route: ActivatedRoute) { }
+    ngOnInit() {
+      this.loading = true;
+      
+        this.route.url.subscribe((url) => {
+            if (url.length > 1) {
+                this.currentPath = url[2].path;
+            } else {
+                this.currentPath = 'Dashboard';
+            }
+        });
 
-  ngOnInit() {
-    this.route.url.subscribe(url => {
-      if (url.length > 1) {
-        this.currentPath = url[2].path;
-      } else {
-        this.currentPath = 'Dashboard';
-      }
-    });
-  }
+        setTimeout(() => {
+          this.loading = false;
+        }, 5000); 
+    }
 
-  @ViewChild ('datatable') datatable: any;
-  search = '';
+    @ViewChild('datatable') datatable: any;
+    search = '';
     cols = [
         { field: 'invoice', title: 'Invoice' },
         { field: 'name', title: 'Name' },
@@ -62,101 +73,136 @@ export class CustomerComponent implements OnInit {
             status: 'Pending',
         },
         {
-            id: 4,
-            invoice: '082693',
-            name: 'Grace Roberts',
-            email: 'graceRoberts@company.com',
-            date: '31 Dec 2020',
-            amount: '344.00',
-            status: 'Paid',
-        },
-        {
-            id: 5,
-            invoice: '084743',
-            name: 'Donna Rogers',
-            email: 'donnaRogers@hotmail.com',
-            date: '03 Jan 2021',
-            amount: '405.15',
-            status: 'Paid',
-        },
-        {
-            id: 6,
-            invoice: '086643',
-            name: 'Amy Diaz',
-            email: 'amy968@gmail.com',
-            date: '14 Jan 2020',
-            amount: '100.00',
-            status: 'Paid',
-        },
-        {
-            id: 7,
-            invoice: '086773',
-            name: 'Nia Hillyer',
-            email: 'niahillyer666@comapny.com',
-            date: '20 Jan 2021',
-            amount: '59.21',
-            status: 'Pending',
-        },
-        {
-            id: 8,
-            invoice: '087916',
-            name: 'Mary McDonald',
-            email: 'maryDonald007@gamil.com',
-            date: '25 Jan 2021',
-            amount: '79.00',
-            status: 'Pending',
-        },
-        {
-            id: 9,
-            invoice: '089472',
-            name: 'Andy King',
-            email: 'kingandy07@company.com',
-            date: '28 Jan 2021',
-            amount: '149.00',
-            status: 'Paid',
-        },
-        {
-            id: 10,
-            invoice: '091768',
-            name: 'Vincent Carpenter',
-            email: 'vincentcarpenter@gmail.com',
-            date: '30 Jan 2021',
-            amount: '400',
-            status: 'Paid',
-        },
-        {
-            id: 11,
-            invoice: '095841',
-            name: 'Kelly Young',
-            email: 'youngkelly@hotmail.com',
-            date: '06 Feb 2021',
-            amount: '49.00',
-            status: 'Pending',
-        },
-        {
-            id: 12,
-            invoice: '098424',
-            name: 'Alma Clarke',
-            email: 'alma.clarke@gmail.com',
-            date: '10 Feb 2021',
-            amount: '234.40',
-            status: 'Paid',
-        },
+          id: 4,
+          invoice: '082693',
+          name: 'Grace Roberts',
+          email: 'graceRoberts@company.com',
+          date: '31 Dec 2020',
+          amount: '344.00',
+          status: 'Paid',
+      },
+      {
+          id: 5,
+          invoice: '084743',
+          name: 'Donna Rogers',
+          email: 'donnaRogers@hotmail.com',
+          date: '03 Jan 2021',
+          amount: '405.15',
+          status: 'Paid',
+      },
+      {
+          id: 6,
+          invoice: '086643',
+          name: 'Amy Diaz',
+          email: 'amy968@gmail.com',
+          date: '14 Jan 2020',
+          amount: '100.00',
+          status: 'Paid',
+      },
+      {
+          id: 7,
+          invoice: '086773',
+          name: 'Nia Hillyer',
+          email: 'niahillyer666@comapny.com',
+          date: '20 Jan 2021',
+          amount: '59.21',
+          status: 'Pending',
+      },
+      {
+          id: 8,
+          invoice: '087916',
+          name: 'Mary McDonald',
+          email: 'maryDonald007@gamil.com',
+          date: '25 Jan 2021',
+          amount: '79.00',
+          status: 'Pending',
+      },
+      {
+          id: 9,
+          invoice: '089472',
+          name: 'Andy King',
+          email: 'kingandy07@company.com',
+          date: '28 Jan 2021',
+          amount: '149.00',
+          status: 'Paid',
+      },
+      {
+          id: 10,
+          invoice: '091768',
+          name: 'Vincent Carpenter',
+          email: 'vincentcarpenter@gmail.com',
+          date: '30 Jan 2021',
+          amount: '400',
+          status: 'Paid',
+      },
+      {
+          id: 11,
+          invoice: '095841',
+          name: 'Kelly Young',
+          email: 'youngkelly@hotmail.com',
+          date: '06 Feb 2021',
+          amount: '49.00',
+          status: 'Pending',
+      },
+      {
+          id: 12,
+          invoice: '098424',
+          name: 'Alma Clarke',
+          email: 'alma.clarke@gmail.com',
+          date: '10 Feb 2021',
+          amount: '234.40',
+          status: 'Paid',
+      },
     ];
-    deleteRow(item: any = null) {
-        if (confirm('Are you sure want to delete selected row ?')) {
-            if (item) {
-                this.items = this.items.filter((d: any) => d.id != item);
-                this.datatable.clearSelectedRows();
-            } else {
-                let selectedRows = this.datatable.getSelectedRows();
-                const ids = selectedRows.map((d: any) => {
-                    return d.id;
-                });
-                this.items = this.items.filter((d: any) => !ids.includes(d.id as never));
-                this.datatable.clearSelectedRows();
-            }
-        }
-    }
 
+    deleteRow(item: any = null) {
+        // let selectedRows = this.datatable.getSelectedRows();
+        // if (!selectedRows.length && !item) {
+            
+        //     this.translate.get('ALERT.NO_SELECTION').subscribe((noSelectionText: string) => {
+        //         Swal.fire('Warning', noSelectionText, 'warning');
+        //     });
+        //     return;  Buraya api den veriler getirilirken bakılacak.!!
+        // } 
+
+        this.translate
+            .get([
+                'ALERT.TITLE',
+                'ALERT.TEXT',
+                'ALERT.CONFIRM',
+                'ALERT.CANCEL',
+                'ALERT.SUCCESS_TITLE',
+                'ALERT.SUCCESS_TEXT',
+                'ALERT.CANCELLED_TITLE',
+                'ALERT.CANCELLED_TEXT',
+            ])
+            .subscribe((translations) => {
+                Swal.fire({
+                    title: translations['ALERT.TITLE'],
+                    text: translations['ALERT.TEXT'],
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: translations['ALERT.CONFIRM'],
+                    cancelButtonText: translations['ALERT.CANCEL'],
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        if (item) {
+                            this.items = this.items.filter((d: any) => d.id != item);
+                            this.datatable.clearSelectedRows();
+                            Swal.fire(translations['ALERT.SUCCESS_TITLE'], translations['ALERT.SUCCESS_TEXT'], 'success');
+                        } else {
+                            let selectedRows = this.datatable.getSelectedRows();
+                            const ids = selectedRows.map((d: any) => {
+                                return d.id;
+                            });
+                            this.items = this.items.filter((d: any) => !ids.includes(d.id as never));
+                            this.datatable.clearSelectedRows();
+                            Swal.fire(translations['ALERT.SUCCESS_TITLE'], translations['ALERT.SUCCESS_TEXT'], 'success');
+                        }
+                    } else if (result.dismiss === Swal.DismissReason.cancel) {
+                        Swal.fire(translations['ALERT.CANCELLED_TITLE'], translations['ALERT.CANCELLED_TEXT'], 'error');
+                    }
+                });
+            });
+    }
 }

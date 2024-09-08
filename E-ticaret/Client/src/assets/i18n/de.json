@@ -176,5 +176,17 @@
     "order": "Bestellung",
     "product": "Produkt",
     "add_new": "Neu hinzufügen",
-    "delete": "Löschen"
+    "delete": "Löschen",
+    "loading": "Laden...",
+    "ALERT": 
+    {
+        "TITLE": "Bist du sicher?",
+        "TEXT": "Du wirst diese Zeile nicht wiederherstellen können!",
+        "CONFIRM": "Ja, löschen!",
+        "CANCEL": "Nein, behalten",
+        "SUCCESS_TITLE": "Gelöscht!",
+        "SUCCESS_TEXT": "Die Zeile wurde gelöscht.",
+        "CANCELLED_TITLE": "Abgebrochen",
+        "CANCELLED_TEXT": "Deine Daten sind sicher :)"
+    }
 }

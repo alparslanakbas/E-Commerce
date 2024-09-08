@@ -176,5 +176,17 @@
     "order": "Sipariş",
     "product": "Ürün",
     "add_new": "Yeni Ekle",
-    "delete": "Sil"
+    "delete": "Sil",
+    "loading": "Yükleniyor...",
+    "ALERT": 
+    {
+        "TITLE": "Emin misiniz?",
+        "TEXT": "Bu satırı geri alamayacaksınız!",
+        "CONFIRM": "Evet, sil!",
+        "CANCEL": "Hayır, tut",
+        "SUCCESS_TITLE": "Silindi!",
+        "SUCCESS_TEXT": "Satır başarıyla silindi.",
+        "CANCELLED_TITLE": "İptal edildi",
+        "CANCELLED_TEXT": "Verileriniz güvende :)"
+    }
 }

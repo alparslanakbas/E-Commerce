@@ -176,5 +176,17 @@
     "order": "订单",
     "product": "产品",
     "add_new": "新增",
-    "delete": "删除"
+    "delete": "删除",
+    "loading": "加载中...",
+    "ALERT": 
+    {
+        "TITLE": "你确定吗？",
+        "TEXT": "您将无法恢复此行！",
+        "CONFIRM": "是的，删除它！",
+        "CANCEL": "不，保留它",
+        "SUCCESS_TITLE": "已删除！",
+        "SUCCESS_TEXT": "该行已删除。",
+        "CANCELLED_TITLE": "已取消",
+        "CANCELLED_TEXT": "您的数据是安全的 :)"
+    }
 }

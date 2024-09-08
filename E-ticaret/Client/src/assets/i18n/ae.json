@@ -176,5 +176,17 @@
     "order": "طلب",
     "product": "منتج",
     "add_new": "إضافة جديد",
-    "delete": "حذف"
+    "delete": "حذف",
+    "loading": "...جار التحميل",
+    "ALERT": 
+    {
+        "TITLE": "هل أنت متأكد؟",
+        "TEXT": "لن تتمكن من استعادة هذا الصف!",
+        "CONFIRM": "نعم، احذفه!",
+        "CANCEL": "لا، احتفظ به",
+        "SUCCESS_TITLE": "تم الحذف!",
+        "SUCCESS_TEXT": "تم حذف الصف.",
+        "CANCELLED_TITLE": "تم الإلغاء",
+        "CANCELLED_TEXT": "بياناتك في أمان :)"
+    }
 }
