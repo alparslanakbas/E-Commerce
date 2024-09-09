@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OWCF7x2qh2yQ+G+Px7VqJJFh4YmkTHk5ZUine5KvjLxy5BmPFfTxiAQl+OKzEevYrRyNyA6zl26YFXkJ5PpW8A==",
+  "dgSpecHash": "BiLnvSoyKNVU72Eh6PJnsPbyRRMPdBjyK42kpU5A4cFBdUKPh/BQ/DAGr1xVoynOUKQ/9XK+ssNCRsPgigMSZA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Presentation\\ETicaretAPI.Api\\ETicaretAPI.Api.csproj",
+  "projectFilePath": "C:\\Users\\legol\\OneDrive\\Masaüstü\\Projem\\E-Commerce\\E-ticaret\\Server\\Presentation\\ETicaretAPI.Api\\ETicaretAPI.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\legol\\.nuget\\packages\\autofac\\8.0.0\\autofac.8.0.0.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\autofac.extensions.dependencyinjection\\9.0.0\\autofac.extensions.dependencyinjection.9.0.0.nupkg.sha512",

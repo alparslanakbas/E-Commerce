@@ -74,7 +74,11 @@ import { DataTableModule } from '@bhplugin/ng-datatable';
         ProductComponent,
         OrderComponent
     ],
-    providers: [Title],
+    providers: 
+    [
+        Title,
+        {provide: "baseUrl", useValue: "https://localhost:7199/api", multi:true}
+    ],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

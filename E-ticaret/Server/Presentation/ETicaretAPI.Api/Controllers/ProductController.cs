@@ -40,5 +40,11 @@ namespace ETicaretAPI.Api.Controllers
             Product product = await _readProductRepo.GetByIdAsync(id);
             return Ok(product);
         }
+
+        [HttpGet]
+        public IActionResult GetAll()
+        {
+            return Ok(_readProductRepo.GetAll());
+        }
     }
 }

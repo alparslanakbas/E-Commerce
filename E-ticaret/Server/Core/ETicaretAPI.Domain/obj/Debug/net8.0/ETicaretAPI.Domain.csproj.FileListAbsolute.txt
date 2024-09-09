@@ -10,3 +10,15 @@ c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.
 c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\refint\ETicaretAPI.Domain.dll
 c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ETicaretAPI.Domain.pdb
 c:\Users\legol\OneDrive\Masaüstü\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ref\ETicaretAPI.Domain.dll
+C:\Users\legol\OneDrive\Masaüstü\Projem\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\bin\Debug\net8.0\ETicaretAPI.Domain.deps.json
+C:\Users\legol\OneDrive\Masaüstü\Projem\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\bin\Debug\net8.0\ETicaretAPI.Domain.dll
+C:\Users\legol\OneDrive\Masaüstü\Projem\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\bin\Debug\net8.0\ETicaretAPI.Domain.pdb
+C:\Users\legol\OneDrive\Masaüstü\Projem\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ETicaretAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\legol\OneDrive\Masaüstü\Projem\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ETicaretAPI.Domain.AssemblyInfoInputs.cache
+C:\Users\legol\OneDrive\Masaüstü\Projem\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ETicaretAPI.Domain.AssemblyInfo.cs
+C:\Users\legol\OneDrive\Masaüstü\Projem\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ETicaretAPI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\legol\OneDrive\Masaüstü\Projem\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ETicaretAPI.Domain.sourcelink.json
+C:\Users\legol\OneDrive\Masaüstü\Projem\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ETicaretAPI.Domain.dll
+C:\Users\legol\OneDrive\Masaüstü\Projem\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\refint\ETicaretAPI.Domain.dll
+C:\Users\legol\OneDrive\Masaüstü\Projem\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ETicaretAPI.Domain.pdb
+C:\Users\legol\OneDrive\Masaüstü\Projem\E-Commerce\E-ticaret\Server\Core\ETicaretAPI.Domain\obj\Debug\net8.0\ref\ETicaretAPI.Domain.dll

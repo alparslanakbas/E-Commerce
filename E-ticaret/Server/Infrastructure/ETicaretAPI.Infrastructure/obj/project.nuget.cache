@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D6Q5S2GWEzsJszPHxmGqb6C3hDLoK2YmLAazNJb1adNBgMBfg7H+d6+oI5QafM4PYnbSXjhob5nfAQJmilMpQg==",
+  "dgSpecHash": "28Odng98IxFs0iWTU2HUmi1Kyr1Nzr2T6OOTwzuQHHAK19r6iYnkAsmhJVXZOVj83W01+8ZHL0ZzoAv7KUmSTA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\legol\\OneDrive\\Masaüstü\\E-Commerce\\E-ticaret\\Server\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\legol\\OneDrive\\Masaüstü\\Projem\\E-Commerce\\E-ticaret\\Server\\Infrastructure\\ETicaretAPI.Infrastructure\\ETicaretAPI.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\legol\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.7\\microsoft.entityframeworkcore.8.0.7.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.7\\microsoft.entityframeworkcore.abstractions.8.0.7.nupkg.sha512",

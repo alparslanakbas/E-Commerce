@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
+import { HttpClientService } from 'src/app/service/http-client.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-product',
@@ -9,10 +12,19 @@ import { ActivatedRoute } from '@angular/router';
 export class ProductComponent implements OnInit {
 
   currentPath: string | undefined;
+  loading : boolean = false;
 
-  constructor(private route: ActivatedRoute) { }
+  constructor
+  (
+    private route: ActivatedRoute,
+    private httpClient: HttpClientService,
+    private translate : TranslateService
+  ) { }
 
   ngOnInit() {
+
+    this.loading = true;
+
     this.route.url.subscribe(url => {
       if (url.length > 1) {
         this.currentPath = url[2].path;
@@ -20,6 +32,16 @@ export class ProductComponent implements OnInit {
         this.currentPath = 'Dashboard';
       }
     });
+
+    setTimeout(() => {
+        this.loading = false;
+      }, 5000); 
+
+    this.httpClient.get({
+        controller: "Product",
+        action : "GetAll"
+    }).subscribe(data => console.log(data));
+    
   }
 
   @ViewChild ('datatable') datatable: any;
@@ -143,20 +165,56 @@ export class ProductComponent implements OnInit {
             status: 'Paid',
         },
     ];
+
     deleteRow(item: any = null) {
-        if (confirm('Are you sure want to delete selected row ?')) {
-            if (item) {
-                this.items = this.items.filter((d: any) => d.id != item);
-                this.datatable.clearSelectedRows();
-            } else {
-                let selectedRows = this.datatable.getSelectedRows();
-                const ids = selectedRows.map((d: any) => {
-                    return d.id;
+        // let selectedRows = this.datatable.getSelectedRows();
+        // if (!selectedRows.length && !item) {
+            
+        //     this.translate.get('ALERT.NO_SELECTION').subscribe((noSelectionText: string) => {
+        //         Swal.fire('Warning', noSelectionText, 'warning');
+        //     });
+        //     return;  Buraya api den veriler getirilirken bakılacak.!!
+        // } 
+
+        this.translate
+            .get([
+                'ALERT.TITLE',
+                'ALERT.TEXT',
+                'ALERT.CONFIRM',
+                'ALERT.CANCEL',
+                'ALERT.SUCCESS_TITLE',
+                'ALERT.SUCCESS_TEXT',
+                'ALERT.CANCELLED_TITLE',
+                'ALERT.CANCELLED_TEXT',
+            ])
+            .subscribe((translations) => {
+                Swal.fire({
+                    title: translations['ALERT.TITLE'],
+                    text: translations['ALERT.TEXT'],
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: translations['ALERT.CONFIRM'],
+                    cancelButtonText: translations['ALERT.CANCEL'],
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        if (item) {
+                            this.items = this.items.filter((d: any) => d.id != item);
+                            this.datatable.clearSelectedRows();
+                            Swal.fire(translations['ALERT.SUCCESS_TITLE'], translations['ALERT.SUCCESS_TEXT'], 'success');
+                        } else {
+                            let selectedRows = this.datatable.getSelectedRows();
+                            const ids = selectedRows.map((d: any) => {
+                                return d.id;
+                            });
+                            this.items = this.items.filter((d: any) => !ids.includes(d.id as never));
+                            this.datatable.clearSelectedRows();
+                            Swal.fire(translations['ALERT.SUCCESS_TITLE'], translations['ALERT.SUCCESS_TEXT'], 'success');
+                        }
+                    } else if (result.dismiss === Swal.DismissReason.cancel) {
+                        Swal.fire(translations['ALERT.CANCELLED_TITLE'], translations['ALERT.CANCELLED_TEXT'], 'error');
+                    }
                 });
-                this.items = this.items.filter((d: any) => !ids.includes(d.id as never));
-                this.datatable.clearSelectedRows();
-            }
-        }
+            });
     }
 
 }
