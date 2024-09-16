@@ -59,7 +59,7 @@ import { DataTableModule } from '@bhplugin/ng-datatable';
             },
         }),
         StoreModule.forRoot({ index: indexReducer }),
-        SharedModule.forRoot(),
+        SharedModule.forRoot()
     ],
     declarations: [
         AppComponent, 
@@ -77,7 +77,7 @@ import { DataTableModule } from '@bhplugin/ng-datatable';
     providers: 
     [
         Title,
-        {provide: "baseUrl", useValue: "https://localhost:7199/api", multi:true}
+        {provide: "baseUrl", useValue: "http://localhost:8081/api", multi:true}
     ],
     bootstrap: [AppComponent],
 })

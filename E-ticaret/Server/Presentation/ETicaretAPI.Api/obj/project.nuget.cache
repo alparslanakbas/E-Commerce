@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "BiLnvSoyKNVU72Eh6PJnsPbyRRMPdBjyK42kpU5A4cFBdUKPh/BQ/DAGr1xVoynOUKQ/9XK+ssNCRsPgigMSZA==",
+  "dgSpecHash": "kh6G3q/1McGE7/w+ugnYGmZmP5ara/wMRh236X777OfRPz3/jGH1uWg4nsIN7QKJI+mXyGXSL4z73ajlVzABwQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\legol\\OneDrive\\Masaüstü\\Projem\\E-Commerce\\E-ticaret\\Server\\Presentation\\ETicaretAPI.Api\\ETicaretAPI.Api.csproj",
   "expectedPackageFiles": [
@@ -37,6 +37,7 @@
     "C:\\Users\\legol\\.nuget\\packages\\microsoft.extensions.options\\8.0.0\\microsoft.extensions.options.8.0.0.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\microsoft.extensions.primitives\\8.0.0\\microsoft.extensions.primitives.8.0.0.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\microsoft.openapi\\1.6.14\\microsoft.openapi.1.6.14.nupkg.sha512",
+    "C:\\Users\\legol\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.19.6\\microsoft.visualstudio.azure.containers.tools.targets.1.19.6.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\npgsql\\8.0.3\\npgsql.8.0.3.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\npgsql.entityframeworkcore.postgresql\\8.0.4\\npgsql.entityframeworkcore.postgresql.8.0.4.nupkg.sha512",

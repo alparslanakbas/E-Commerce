@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("1415b26b-6d78-49da-abf8-03b08d03fd4e")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("ETicaretAPI.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2586924a867a1f9bada8ea72e96d731a6abb49fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe7c35eae11de6ea9a9540a9eeecedade9ffdced")]
 [assembly: System.Reflection.AssemblyProductAttribute("ETicaretAPI.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ETicaretAPI.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
