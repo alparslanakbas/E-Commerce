@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ETicaretAPI.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fe7c35eae11de6ea9a9540a9eeecedade9ffdced")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d96a1d72bf7ef4db853602487db6f0e80828458")]
 [assembly: System.Reflection.AssemblyProductAttribute("ETicaretAPI.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ETicaretAPI.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

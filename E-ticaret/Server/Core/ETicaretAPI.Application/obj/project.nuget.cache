@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "F2T0bXvYh/Ndj70YU6HP/bvaYUm6eqEbiZncP7Qo0cH0fW6Vdl7NjTS65vBhw/6tmsRvI6u2S4Eao9os8Dl7Nw==",
+  "dgSpecHash": "Rxz8wi0mIkEVqXAgNqaP+ysMf/sdJpyGXT7QWgt53xUgy1pJrPxuy+r5CtUyDowZwdyWd3R/PdCBP6VzqadA6A==",
   "success": true,
   "projectFilePath": "C:\\Users\\legol\\OneDrive\\Masaüstü\\Projem\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\legol\\.nuget\\packages\\fluentvalidation\\11.10.0\\fluentvalidation.11.10.0.nupkg.sha512",
+    "C:\\Users\\legol\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\legol\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.10.0\\fluentvalidation.dependencyinjectionextensions.11.10.0.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.7\\microsoft.entityframeworkcore.8.0.7.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.7\\microsoft.entityframeworkcore.abstractions.8.0.7.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.7\\microsoft.entityframeworkcore.analyzers.8.0.7.nupkg.sha512",

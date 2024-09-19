@@ -13,6 +13,12 @@ import { TranslateModule } from '@ngx-translate/core';
 // perfect-scrollbar
 import { NgScrollbarModule, provideScrollbarOptions } from 'ngx-scrollbar';
 
+// Counter
+import { CountUpModule } from 'ngx-countup';
+
+// sortable
+import { SortablejsModule } from '@dustfoundation/ngx-sortablejs';
+
 // modal
 import { NgxCustomModalComponent } from 'ngx-custom-modal';
 
@@ -24,17 +30,20 @@ import { MenuModule } from 'headlessui-angular';
 
 // icons
 import { IconModule } from 'src/app/shared/icon/icon.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
     imports: [
-        CommonModule, 
+        CommonModule,
         FormsModule, 
         ReactiveFormsModule, 
         RouterModule, 
         TranslateModule.forChild(), 
         NgScrollbarModule, 
         MenuModule, 
-        IconModule, 
+        IconModule,
+        CountUpModule, 
+        SortablejsModule,
         NgxCustomModalComponent],
     declarations: [],
     exports: [
@@ -45,6 +54,8 @@ import { IconModule } from 'src/app/shared/icon/icon.module';
         NgScrollbarModule,
         MenuModule,
         IconModule,
+        CountUpModule,
+        SortablejsModule,
         NgxCustomModalComponent
     ],
 })

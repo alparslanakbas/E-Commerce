@@ -9,7 +9,7 @@
     </ul>
     <div class="panel border-[#e0e6ed] px-0 pb-1.5 dark:border-[#1b2e4b]">
         <div class="datatable invoice-table">
-            <div class="mb-4.5 flex flex-col gap-5 px-5 md:flex-row md:items-center">
+            <div class="mb-4.5 flex flex-col gap-5 px-5 md:flex-row md:items-center md:justify-between">
                 <div class="flex items-center gap-2">
                     <button type="button" class="btn btn-danger gap-2" (click)="deleteRow()">
                         <icon-trash-lines />
@@ -32,8 +32,21 @@
                         PRINT
                     </button>
                 </div>
-                <div class="ltr:ml-auto rtl:mr-auto">
-                    <input [(ngModel)]="search" type="text" class="form-input" placeholder="{{ 'search' | translate }}" />
+                <div class="flex items-center gap-6 relative">
+                    <div
+                        class="flex h-auto w-auto px-4 flex-col justify-center rounded-full border border-[#e0e6ed] shadow-[1px_2px_12px_0_rgba(31,45,61,0.10)] dark:border-[#1b2e4b]"
+                        style="pointer-events: none"
+                    >
+                        <div class="flex items-center justify-center relative text-xl text-primary sm:text-3xl">
+                            <div [countUp]="totalProductCount" [options]="{ startVal: 0, duration: 7 }"></div>
+                            <span class="ml-2 dark:text-white-dark">
+                                <icon-box [fill]="true" class="h-6 w-6"></icon-box>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="ml-auto">
+                        <input [(ngModel)]="search" type="text" class="form-input" placeholder="{{ 'search' | translate }}" />
+                    </div>
                 </div>
             </div>
 
@@ -44,16 +57,14 @@
                 [hasCheckbox]="true"
                 [sortable]="true"
                 [search]="search"
-                [pageSizeOptions]="[10,15,20,30,50,100]"
+                [pageSizeOptions]="[10, 15, 20, 30, 50, 100]"
                 [columnFilter]="true"
                 [cloneHeaderInFooter]="true"
                 [firstArrow]="'firstArrow' | translate"
                 [lastArrow]="'lastArrow' | translate"
-                [noDataContent]="'noDataContent' | translate" 
-                [paginationInfo]="'4 kayıttan 1 ile 4 arasını gösteriyor'"   
-                [showNumbers]="true"     
-
-
+                [noDataContent]="'noDataContent' | translate"
+                [paginationInfo]="paginationInfo"
+                [showNumbers]="true"
                 skin="whitespace-nowrap bh-table-hover"
                 previousArrow='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5 rtl:rotate-180"> <path d="M15 5L9 12L15 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </svg>'
                 nextArrow='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5 rtl:rotate-180"> <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </svg>'
@@ -97,34 +108,35 @@
     <!-- Product Add Modal -->
     <div>
         <ngx-custom-modal #modal21 customClass="modal-top auth-modal">
-            <ng-template #modalHeader> <div class="!py-5">{{'add_product' | translate}}</div> </ng-template>
+            <ng-template #modalHeader>
+                <div class="!py-5">{{ 'add_product' | translate }}</div>
+            </ng-template>
             <ng-template #modalBody>
                 <form>
                     <div class="relative mb-4">
-                      <span class="absolute top-1/2 -translate-y-1/2 dark:text-white-dark ltr:left-3 rtl:right-3">
-                        <icon-box [fill]="true" class="h-6 w-6" />
-                      </span>
-                      <input type="text" placeholder="{{'name' | translate}}" class="form-input ltr:pl-10 rtl:pr-10" />
+                        <span class="absolute top-1/2 -translate-y-1/2 dark:text-white-dark ltr:left-3 rtl:right-3">
+                            <icon-box [fill]="true" class="h-6 w-6"></icon-box>
+                        </span>
+                        <input #name type="text" placeholder="{{ 'name' | translate }}" class="form-input ltr:pl-10 rtl:pr-10" />
                     </div>
                     <div class="relative mb-4">
-                      <span class="absolute top-1/2 -translate-y-1/2 dark:text-white-dark ltr:left-3 rtl:right-3">
-                        <icon-menu-widgets class="h-6 w-6" />
-                      </span>
-                      <input type="number" placeholder="{{'stock' | translate}}" class="form-input ltr:pl-10 rtl:pr-10" />
+                        <span class="absolute top-1/2 -translate-y-1/2 dark:text-white-dark ltr:left-3 rtl:right-3">
+                            <icon-menu-widgets class="h-6 w-6"></icon-menu-widgets>
+                        </span>
+                        <input #stock type="number" placeholder="{{ 'stock' | translate }}" class="form-input ltr:pl-10 rtl:pr-10" />
                     </div>
                     <div class="relative mb-4">
-                      <span class="absolute top-1/2 -translate-y-1/2 dark:text-white-dark ltr:left-3 rtl:right-3">
-                        <icon-dollar-sign-circle [fill]="true" class="h-6 w-6" />
-                      </span>
-                      <input type="text" placeholder="{{'price' | translate}}" class="form-input ltr:pl-10 rtl:pr-10" />
+                        <span class="absolute top-1/2 -translate-y-1/2 dark:text-white-dark ltr:left-3 rtl:right-3">
+                            <icon-dollar-sign-circle [fill]="true" class="h-6 w-6"></icon-dollar-sign-circle>
+                        </span>
+                        <input #price type="text" placeholder="{{ 'price' | translate }}" class="form-input ltr:pl-10 rtl:pr-10" />
                     </div>
                     <div class="flex justify-end space-x-3">
-                      <button type="button" class="btn btn-primary w-50">{{'add' | translate}}</button>
-                      <button type="button" class="btn btn-danger w-50">{{'cancel' | translate}}</button>
+                        <button type="button" (click)="add(name, stock, price)" class="btn btn-primary w-50">{{ 'add' | translate }}</button>
+                        <button type="button" class="btn btn-danger w-50">{{ 'cancel' | translate }}</button>
                     </div>
-                  </form>      
+                </form>
             </ng-template>
         </ngx-custom-modal>
     </div>
-    
 </div>

@@ -1,0 +1,55 @@
+<div class="relative pt-5">
+  <div class="-mx-2 h-full">
+      <div class="flex flex-nowrap items-start gap-5 overflow-x-auto px-2 pb-2">
+          <ng-container *ngFor="let project of projectList" key="project.id">
+              <div class="panel w-80 flex-none">
+                  <div class="mb-5 flex justify-between">
+                      <h4 class="text-base font-semibold">{{ project.title }}</h4>
+
+                      <div class="flex items-center">
+                          <button type="button" class="hover:text-primary ltr:mr-2 rtl:ml-2">
+                              <icon-plus-circle />
+                          </button>
+                      </div>
+                  </div>
+                  <div
+                      [sortablejs]="project.tasks"
+                      [sortablejsOptions]="{ animation: 200, group: 'default', ghostClass: 'sortable-ghost', dragClass:'sortable-drag' }"
+                      class="connect-sorting-content min-h-[150px]"
+                  >
+                      <div class="sortable-list" *ngFor="let task of project.tasks" key="project.id + '' + task.id">
+                          <div class="mb-5 cursor-move space-y-3 rounded-md bg-[#f4f4f4] p-3 pb-5 shadow dark:bg-white-dark/20">
+                              <ng-container *ngIf="task.image">
+                                  <img src="/assets/images/carousel1.jpeg" alt="images" class="h-32 w-full rounded-md object-cover" />
+                              </ng-container>
+                              <div class="text-base font-medium">{{ task.title }}</div>
+                              <p class="break-all">{{ task.description }}</p>
+                              <div class="flex items-center justify-between">
+                                  <div class="flex items-center font-medium hover:text-primary">
+                                      <icon-calendar class="shrink-0 ltr:mr-3 rtl:ml-3" />
+                                      <span>{{ task.date }}</span>
+                                  </div>
+                                  <div class="flex items-center">
+                                      <button type="button" class="hover:text-info" >
+                                          <icon-edit class="ltr:mr-3 rtl:ml-3" />
+                                      </button>
+                                      <button type="button" class="hover:text-danger" >
+                                          <icon-trash-lines />
+                                      </button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <div class="pt-3">
+                      <button type="button" class="btn btn-primary mx-auto">
+                          <icon-plus />
+                          Görev Ekle
+                      </button>
+                  </div>
+              </div>
+          </ng-container>
+      </div>
+  </div>
+</div>

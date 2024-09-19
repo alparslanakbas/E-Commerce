@@ -14,5 +14,6 @@ namespace ETicaretAPI.Application.Repositories
         IQueryable<T> GetWhere(Expression<Func<T,bool>> method, bool tracking = false);
         Task<T> GetSingleAsync(Expression<Func<T, bool>> method, bool tracking = false);
         Task<T> GetByIdAsync(string id, bool tracking = false);
+        Task <bool> ExistInDatabaseAsync(Expression<Func<T, bool>> predicate);
     }
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule, Title } from '@angular/platform-browser';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpBackend, HttpClient, HttpClientModule } from '@angular/common/http';
@@ -41,12 +41,14 @@ import { CustomerComponent } from './admin/layouts/components/customer/customer.
 import { ProductComponent } from './admin/layouts/components/product/product.component';
 import { OrderComponent } from './admin/layouts/components/order/order.component';
 import { DataTableModule } from '@bhplugin/ng-datatable';
+import { TodoListComponent } from './admin/layouts/components/todo-list/todo-list.component';
 
 @NgModule({
     imports: [
         RouterModule.forRoot(routes, { scrollPositionRestoration: 'enabled' }),
         BrowserModule,
         BrowserAnimationsModule,
+        NoopAnimationsModule,
         CommonModule,
         FormsModule,
         HttpClientModule,
@@ -72,12 +74,13 @@ import { DataTableModule } from '@bhplugin/ng-datatable';
         AuthLayout,
         CustomerComponent,
         ProductComponent,
-        OrderComponent
+        OrderComponent,
+        TodoListComponent
     ],
     providers: 
     [
         Title,
-        {provide: "baseUrl", useValue: "http://localhost:8081/api", multi:true}
+        {provide: "baseUrl", useValue: "https://localhost:7199/api", multi:true}
     ],
     bootstrap: [AppComponent],
 })

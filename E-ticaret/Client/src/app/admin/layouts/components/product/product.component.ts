@@ -1,7 +1,9 @@
 import { DatePipe, formatDate } from '@angular/common';
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { error } from 'console';
 import { Product } from 'src/app/models/product';
 import { HttpClientService } from 'src/app/service/http-client.service';
 import Swal from 'sweetalert2';
@@ -15,8 +17,15 @@ export class ProductComponent implements OnInit {
 
   currentPath: string | undefined;
   products: Product[] = [];
+  product: Product =new Product;
   indexCount: number = 0;
   nowDate = new Date();
+
+  totalProductCount: number =0;
+  currentPage: number=1;
+  pageSize: number=10;
+  displayedProducts: any[] = [];
+  paginationInfo: string = "";
   
 
   constructor
@@ -48,8 +57,10 @@ export class ProductComponent implements OnInit {
         next: (data: Product[]) => {
           this.products = data.map((product) => ({
             ...product, 
-            index: ++this.indexCount 
-          }));
+            index: ++this.indexCount
+          })),
+          this.totalProductCount = data.length;
+          this.setPagination();
         },
         error: (err) => {
           console.log("Hata:", err);
@@ -244,7 +255,17 @@ exportTable(type: string) {
         .join(' ');
 }
 
-    deleteRow(item: any = null) {
+setPagination() {
+  const start = (this.currentPage - 1) * this.pageSize;
+  const end = this.currentPage * this.pageSize;
+  this.displayedProducts = this.products.slice(start, end);
+
+  const displayStart = start + 1;
+  const displayEnd = Math.min(end, this.totalProductCount);
+  this.paginationInfo = `Showing ${displayStart} to ${displayEnd} of ${this.totalProductCount} entries`;
+}
+
+deleteRow(item: any = null) {
         // let selectedRows = this.datatable.getSelectedRows();
         // if (!selectedRows.length && !item) {
             
@@ -293,6 +314,40 @@ exportTable(type: string) {
                     }
                 });
             });
-    }
+}
 
+add(name : HTMLInputElement, stock : HTMLInputElement, price : HTMLInputElement, errorCallBack?: (errorMessage: string) =>{}){
+  this.product.name = name.value;
+  this.product.stock = parseInt(stock.value);
+  this.product.price = parseInt(price.value);
+
+  const requestParameters ={
+    controller: 'Product',
+    action: 'Add'
+  };
+
+  this.httpClient.post<Product>(requestParameters, this.product).subscribe({
+    next:(response) =>{
+      Swal.fire({
+        icon: 'success',
+        title:'Başarılı' ,
+        text:response.name+' Adlı Ürün Eklendi'
+      });
+      this.product = new Product();
+      },
+      error: (err)=>{
+        (errorResponse: HttpErrorResponse) =>{
+          const _error: Array<{key: string, value:  Array <string>}> = errorResponse.error;
+          let message = "";
+          _error.forEach((v, index)=>{
+            v.value.forEach((_v, _index)=>{
+              message += `${_v}<br>`;
+              console.log(message)
+            });
+          });
+          errorCallBack(message);
+        }
+      }
+    }
+  )}
 }

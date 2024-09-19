@@ -31,7 +31,6 @@
                               </span>
                             </a>
                           </div>
-                          
                             <div [ngClass]="{ 'rtl:rotate-90 -rotate-90': !activeDropdown.includes('dashboard') }">
                                 <icon-caret-down />
                             </div>
@@ -50,6 +49,35 @@
                             </ul>
                         </div>
                     </li>
+                    
+                    <li class="accordion menu nav-item">
+                        <button
+                            type="button"
+                            class="nav-link group w-full"
+                            [ngClass]="{ active: activeDropdown.includes('todo') }"
+                            (click)="toggleAccordion('todo')"
+                        >
+                        <div class="flex items-center">
+                            <icon-menu-dashboard class="shrink-0 group-hover:!text-primary"></icon-menu-dashboard>
+                            <a routerLinkActive="active" (click)="toggleMobileMenu()" class="flex items-center">
+                              <span class="text-black ltr:pl-3 rtl:pr-3 dark:text-[#506690] dark:group-hover:text-white-dark">
+                                Todo
+                              </span>
+                            </a>
+                          </div>
+                            <div [ngClass]="{ 'rtl:rotate-90 -rotate-90': !activeDropdown.includes('todo') }">
+                                <icon-caret-down />
+                            </div>
+                        </button>
+                        <div [@slideDownUp]="!activeDropdown.includes('todo')" class="accordion-content">
+                            <ul class="sub-menu text-gray-500">
+                                <li>
+                                    <a routerLink="admin/todo/list" routerLinkActive="active" (click)="toggleMobileMenu()">Yapılacaklar</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
                 </ul>
             </ng-scrollbar>
         </div>

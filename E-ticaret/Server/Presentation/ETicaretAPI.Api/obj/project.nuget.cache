@@ -1,11 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "kh6G3q/1McGE7/w+ugnYGmZmP5ara/wMRh236X777OfRPz3/jGH1uWg4nsIN7QKJI+mXyGXSL4z73ajlVzABwQ==",
+  "dgSpecHash": "4iUc+DzdOS2nHoimk4h8zlPpqeljuPig25oF1Rg2y0uFbDxGX74IomDUqf4cLKQC3atcoLlmBVNsszXU5sijkQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\legol\\OneDrive\\Masaüstü\\Projem\\E-Commerce\\E-ticaret\\Server\\Presentation\\ETicaretAPI.Api\\ETicaretAPI.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\legol\\.nuget\\packages\\autofac\\8.0.0\\autofac.8.0.0.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\autofac.extensions.dependencyinjection\\9.0.0\\autofac.extensions.dependencyinjection.9.0.0.nupkg.sha512",
+    "C:\\Users\\legol\\.nuget\\packages\\fluentvalidation\\11.10.0\\fluentvalidation.11.10.0.nupkg.sha512",
+    "C:\\Users\\legol\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.0\\fluentvalidation.aspnetcore.11.3.0.nupkg.sha512",
+    "C:\\Users\\legol\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.10.0\\fluentvalidation.dependencyinjectionextensions.11.10.0.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\legol\\.nuget\\packages\\microsoft.codeanalysis.analyzers\\3.3.3\\microsoft.codeanalysis.analyzers.3.3.3.nupkg.sha512",

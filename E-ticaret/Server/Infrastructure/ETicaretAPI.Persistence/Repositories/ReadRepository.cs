@@ -22,6 +22,11 @@ namespace ETicaretAPI.Persistence.Repositories
 
         public DbSet<T> Table => _context.Set<T>();
 
+        public async Task <bool> ExistInDatabaseAsync(Expression<Func<T, bool>> predicate)
+        {
+             return await _context.Set<T>().AnyAsync(predicate);
+        }
+
         public IQueryable<T> GetAll(bool tracking = false) 
         {
             var query = _context.Set<T>();
