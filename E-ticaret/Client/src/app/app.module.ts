@@ -42,6 +42,7 @@ import { ProductComponent } from './admin/layouts/components/product/product.com
 import { OrderComponent } from './admin/layouts/components/order/order.component';
 import { DataTableModule } from '@bhplugin/ng-datatable';
 import { TodoListComponent } from './admin/layouts/components/todo-list/todo-list.component';
+import { FileUploadComponent } from './service/file-upload/file-upload.component';
 
 @NgModule({
     imports: [
@@ -75,7 +76,8 @@ import { TodoListComponent } from './admin/layouts/components/todo-list/todo-lis
         CustomerComponent,
         ProductComponent,
         OrderComponent,
-        TodoListComponent
+        TodoListComponent,
+        FileUploadComponent
     ],
     providers: 
     [

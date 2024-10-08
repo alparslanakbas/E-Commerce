@@ -193,6 +193,13 @@
     "createdDate": "Skapad datum",
     "updatedDate": "Uppdaterad datum",
     "actions": "Åtgärder",
+    "PAGINATION": 
+    {
+        "showing": "Visar",
+        "to": "till",
+        "of": "av",
+        "entries": "poster"
+    },
     "ALERT": 
     {
         "TITLE": "Är du säker?",

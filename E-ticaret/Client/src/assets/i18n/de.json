@@ -193,6 +193,13 @@
     "createdDate": "Erstellungsdatum",
     "updatedDate": "Aktualisierungsdatum",
     "actions": "Aktionen",
+    "PAGINATION": 
+    {
+        "showing": "Zeigt",
+        "to": "bis",
+        "of": "von",
+        "entries": "Einträgen"
+    },
     "ALERT": 
     {
         "TITLE": "Bist du sicher?",

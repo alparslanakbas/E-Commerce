@@ -30,7 +30,7 @@ import { MenuModule } from 'headlessui-angular';
 
 // icons
 import { IconModule } from 'src/app/shared/icon/icon.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxFileDropModule } from 'ngx-file-drop';
 
 @NgModule({
     imports: [
@@ -44,7 +44,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         IconModule,
         CountUpModule, 
         SortablejsModule,
-        NgxCustomModalComponent],
+        NgxCustomModalComponent,
+        NgxFileDropModule
+    ],
     declarations: [],
     exports: [
         // modules
@@ -56,7 +58,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
         IconModule,
         CountUpModule,
         SortablejsModule,
-        NgxCustomModalComponent
+        NgxCustomModalComponent,
+        NgxFileDropModule
     ],
 })
 

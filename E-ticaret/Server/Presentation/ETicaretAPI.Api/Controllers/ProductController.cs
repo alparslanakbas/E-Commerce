@@ -1,10 +1,12 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Net;
 using System.Threading.Tasks;
 using ETicaretAPI.Application.Dtos.Product;
 using ETicaretAPI.Application.Repositories.ProductRepo;
+using ETicaretAPI.Application.RequestParameters;
 using ETicaretAPI.Domain.Entities.Common;
 using Microsoft.AspNetCore.Mvc;
 
@@ -16,89 +18,128 @@ namespace ETicaretAPI.Api.Controllers
     {
         private readonly IReadProductRepo _readProductRepo;
         private readonly IWriteProductRepo _writeProductRepo;
+        private readonly IWebHostEnvironment _webHostEnvironment;
 
-        public ProductController(IReadProductRepo readProductRepo, IWriteProductRepo writeProductRepo)
+        public ProductController(IReadProductRepo readProductRepo, IWriteProductRepo writeProductRepo, IWebHostEnvironment webHostEnvironment)
         {
             _readProductRepo = readProductRepo;
             _writeProductRepo = writeProductRepo;
+            _webHostEnvironment = webHostEnvironment;
         }
 
         [HttpGet]
-        public async Task Get()
+        public async Task<IActionResult> GetAll
+            (
+                [FromQuery] Pagination pagination,
+                [FromQuery] Guid? id = null,
+                [FromQuery] string? name = null,
+                [FromQuery] string? stock = null,
+                [FromQuery] string? price = null,
+                [FromQuery] string? createdDate = null,
+                [FromQuery] string? updatedDate = null,
+                [FromQuery] string? sortColumn = null,
+                [FromQuery] bool ascending = true
+            )
         {
-            await _writeProductRepo.AddAsync(new()
-            {
-                Name = "Örnek veri",
-                Price = 50F,
-                Stock = 50
-            });
-
-            await _writeProductRepo.SaveAsync();
+            var products = await _readProductRepo.GetPagedAsync
+                (
+                    pagination, id, name, stock, price, createdDate, updatedDate, sortColumn, ascending
+                );
+            return Ok(products);
         }
 
+
         [HttpGet("{id}")]
-        public async Task <IActionResult> Get(string id)
+        public async Task<IActionResult> GetById(Guid id)
         {
-            Product product = await _readProductRepo.GetByIdAsync(id);
+            var product = await _readProductRepo.GetByIdAsync(id);
+            if (product is null) return NotFound();
             return Ok(product);
         }
 
-        [HttpGet]
-        public IActionResult GetAll()
-        {
-            return Ok(_readProductRepo.GetAll());
-        }
-
         [HttpPost]
-        public async Task<IActionResult> Add(CreateProductDto createProductDto)
+        public async Task<IActionResult> Add([FromBody] CreateProductDto createProductDto)
         {
-            //if (ModelState.IsValid)
-            //{
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
 
-            //}
-
-            await _writeProductRepo.AddAsync(new(){
-                Name = createProductDto.Name,
-                Price=createProductDto.Price,
-                Stock=createProductDto.Stock
-            });
-            await _writeProductRepo.SaveAsync();
-            return StatusCode((int) HttpStatusCode.Created);
-        }
-
-        // Dummy Data
-        [HttpPost]
-        public async Task AddBulkProducts()
-        {
-            List<CreateProductDto> productsDto = new List<CreateProductDto>();
-
-            // 100000 ürün oluþtur
-            for (int i = 0; i < 100000; i++)
+            var productExists = await _writeProductRepo.ExistInDatabaseAsync(p => p.Name == createProductDto.Name);
+            if (productExists)
             {
-                var productDto = new CreateProductDto
-                (
-                    Name: $"Örnek veri {i}",
-                    Stock: 50,
-                    Price: 50f,
-                    CreatedDate: DateTime.UtcNow
-                );
-
-                productsDto.Add(productDto);
+                return BadRequest("Bu ürün adý zaten mevcut.");
             }
 
-            // DTO'dan Product entity'sine dönüþtür
-            List<Product> products = productsDto.Select(dto => new Product
+            var product = new Product
             {
                 Id = Guid.NewGuid(),
-                Name = dto.Name,
-                Stock = dto.Stock,
-                Price = dto.Price,
-                CreatedDate = dto.CreatedDate
-            }).ToList();
+                Name = createProductDto.Name,
+                Stock = createProductDto.Stock,
+                Price = createProductDto.Price,
+            };
 
-            // Veritabanýna ekle
-            await _writeProductRepo.AddRangeAsync(products);
+            await _writeProductRepo.AddAsync(product);
             await _writeProductRepo.SaveAsync();
+
+            return CreatedAtAction(nameof(GetById), new { id = product.Id }, product);
+        }
+
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(Guid id, [FromBody] UpdateProductDto updateProductDto)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var existingProduct = await _readProductRepo.GetByIdAsync(id);
+            if (existingProduct is null) return NotFound();
+
+            var productExists = await _writeProductRepo.ExistInDatabaseAsync(p => p.Name == updateProductDto.Name && p.Id != id);
+            if (productExists)
+            {
+                return BadRequest("Bu ürün adý baþka bir kayýt tarafýndan kullanýlmakta.");
+            }
+
+            existingProduct.Name = updateProductDto.Name;
+            existingProduct.Stock = updateProductDto.Stock;
+            existingProduct.Price = updateProductDto.Price;
+            existingProduct.UpdatedDate = DateTime.UtcNow; 
+
+            await _writeProductRepo.UpdateAsync(existingProduct);
+            await _writeProductRepo.SaveAsync();
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var product = await _readProductRepo.GetByIdAsync(id);
+            if (product is null) return NotFound();
+
+            await _writeProductRepo.DeleteAsync(product);
+            await _writeProductRepo.SaveAsync();
+
+            return NoContent();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Upload()
+        {
+            string uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, "images/products");
+            
+            if (!Directory.Exists(uploadPath)) Directory.CreateDirectory(uploadPath);
+
+            Random random = new();
+
+            foreach (IFormFile file in Request.Form.Files)
+            {
+                string fullPath = Path.Combine(uploadPath, $"{random.Next()}{Path.GetExtension(file.FileName)}");
+
+                using FileStream fileStream = new(fullPath, FileMode.Create, FileAccess.Write, FileShare.None, 1024 * 1024, useAsync:false);
+                await file.CopyToAsync(fileStream);
+                await fileStream.FlushAsync();
+            }
+            return NoContent();
         }
 
     }

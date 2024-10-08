@@ -193,6 +193,13 @@
     "createdDate": "Oprettelsesdato",
     "updatedDate": "Opdateringsdato",
     "actions": "Handlinger",
+    "PAGINATION": 
+    {
+        "showing": "Viser",
+        "to": "til",
+        "of": "af",
+        "entries": "poster"
+    },
     "ALERT": 
     {
         "TITLE": "Er du sikker?",

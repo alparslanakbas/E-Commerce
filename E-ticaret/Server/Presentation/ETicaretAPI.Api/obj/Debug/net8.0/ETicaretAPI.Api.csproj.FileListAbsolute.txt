@@ -233,3 +233,4 @@ C:\Users\legol\OneDrive\Masaüstü\Projem\E-Commerce\E-ticaret\Server\Presentati
 C:\Users\legol\OneDrive\Masaüstü\Projem\E-Commerce\E-ticaret\Server\Presentation\ETicaretAPI.Api\bin\Debug\net8.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\legol\OneDrive\Masaüstü\Projem\E-Commerce\E-ticaret\Server\Presentation\ETicaretAPI.Api\bin\Debug\net8.0\ETicaretAPI.Infrastructure.dll
 C:\Users\legol\OneDrive\Masaüstü\Projem\E-Commerce\E-ticaret\Server\Presentation\ETicaretAPI.Api\bin\Debug\net8.0\ETicaretAPI.Infrastructure.pdb
+C:\Users\legol\OneDrive\Masaüstü\Projem\E-Commerce\E-ticaret\Server\Presentation\ETicaretAPI.Api\bin\Debug\net8.0\ETicaretAPI.Api.staticwebassets.runtime.json

@@ -193,6 +193,13 @@
     "createdDate": "作成日",
     "updatedDate": "更新日",
     "actions": "アクション",
+    "PAGINATION": 
+    {
+        "showing": "表示中",
+        "to": "から",
+        "of": "の",
+        "entries": "エントリ"
+    },
     "ALERT": 
     {
         "TITLE": "本当によろしいですか？",

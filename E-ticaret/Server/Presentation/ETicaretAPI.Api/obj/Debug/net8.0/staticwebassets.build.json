@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "jURHjL3SweLZ6nCCcshjIWIvBdbT8Dp7SHAPMiVpqB0=",
+  "Hash": "1JkgQi8CWjEvO6h0iJHRInKvfi7WgUnyYD9tRjY7pHQ=",
   "Source": "ETicaretAPI.Api",
   "BasePath": "_content/ETicaretAPI.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "ETicaretAPI.Api\\wwwroot",
+      "Source": "ETicaretAPI.Api",
+      "ContentRoot": "C:\\Users\\legol\\OneDrive\\Masaüstü\\Projem\\E-Commerce\\E-ticaret\\Server\\Presentation\\ETicaretAPI.Api\\wwwroot\\",
+      "BasePath": "_content/ETicaretAPI.Api",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

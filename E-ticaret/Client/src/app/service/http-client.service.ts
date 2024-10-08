@@ -19,16 +19,19 @@ private url(requestParameters : Partial<RequestParameters>) : string {
 }
 
 // List
-get<T>(requestParameters : Partial<RequestParameters>, id?: string) : Observable<T>{
-  let url : string = "";
+get<T>(requestParameters: Partial<RequestParameters>, id?: string, queryParams?: string): Observable<T> {
+  let url: string = "";
 
-  if(requestParameters.fullEndPoint)
+  if (requestParameters.fullEndPoint)
     url = requestParameters.fullEndPoint;
-
   else
-    url = `${this.url(requestParameters)}${id ? `/${id}` : ""}`;
+    url = `${this.url(requestParameters)}${id ? `/${id}` : ""}${requestParameters.queryString ? `?${requestParameters.queryString}` : "" }`;
 
-    return  this.httpClient.get<T>(url,{headers: requestParameters.headers})
+  if (queryParams) {
+    url += `?${queryParams}`;
+  }
+
+  return this.httpClient.get<T>(url, { headers: requestParameters.headers });
 }
 
 // Add
@@ -39,7 +42,7 @@ post<T>(requestParameters : Partial<RequestParameters>, body : Partial<T>): Obse
     url = requestParameters.fullEndPoint;
 
   else
-    url = `${this.url(requestParameters)}`
+    url = `${this.url(requestParameters)}${requestParameters.queryString ? `?${requestParameters.queryString}` : "" }`
     return this.httpClient.post<T>(url, body,{ headers: requestParameters.headers});
 }
 
@@ -51,7 +54,7 @@ delete<T>(requestParameters : Partial<RequestParameters>, id: string): Observabl
     url = requestParameters.fullEndPoint;
 
   else
-    url = `${this.url(requestParameters)}/${id}`
+    url = `${this.url(requestParameters)}/${id}${requestParameters.queryString ? `?${requestParameters.queryString}` : "" }`
     return this.httpClient.delete<T>(url, {headers: requestParameters.headers})
 
 }
@@ -64,7 +67,7 @@ put<T>(requestParameters : Partial<RequestParameters>, body : Partial<T>): Obser
     url = requestParameters.fullEndPoint;
 
   else
-    url = `${this.url(requestParameters)}`
+    url = `${this.url(requestParameters)}${requestParameters.queryString ? `?${requestParameters.queryString}` : "" }`
     return this.httpClient.put<T>(url, body,{ headers: requestParameters.headers});
 }
 
@@ -87,6 +90,8 @@ put<T>(requestParameters : Partial<RequestParameters>, body : Partial<T>): Obser
 export class RequestParameters{
   controller?: string;
   action?: string;
+  queryString?: string;
+
   headers?: HttpHeaders;
   baseUrl?: string;
   fullEndPoint?: string;

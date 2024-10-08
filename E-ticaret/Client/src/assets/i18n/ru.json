@@ -193,6 +193,13 @@
     "createdDate": "Дата создания",
     "updatedDate": "Дата обновления",
     "actions": "Действия",
+    "PAGINATION": 
+    {
+        "showing": "Показано",
+        "to": "по",
+        "of": "из",
+        "entries": "записей"
+    },
     "ALERT": 
     {
         "TITLE": "Вы уверены?",

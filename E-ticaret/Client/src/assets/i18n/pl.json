@@ -193,6 +193,13 @@
     "createdDate": "Data utworzenia",
     "updatedDate": "Data aktualizacji",
     "actions": "Akcje",
+    "PAGINATION": 
+    {
+        "showing": "Wyświetlanie",
+        "to": "do",
+        "of": "z",
+        "entries": "wpisów"
+    },
     "ALERT": 
     {
         "TITLE": "Jesteś pewien?",

@@ -193,6 +193,13 @@
     "createdDate": "Létrehozás dátuma",
     "updatedDate": "Frissítés dátuma",
     "actions": "Műveletek",
+    "PAGINATION": 
+    {
+        "showing": "Mutat",
+        "to": "ig",
+        "of": "a(z)",
+        "entries": "bejegyzésekből"
+    },
     "ALERT": 
     {
         "TITLE": "Biztos vagy benne?",

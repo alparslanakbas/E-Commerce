@@ -193,6 +193,13 @@
     "createdDate": "تاريخ الإنشاء",
     "updatedDate": "تاريخ التحديث",
     "actions": "إجراءات",
+    "PAGINATION": 
+    {
+        "showing": "عرض",
+        "to": "إلى",
+        "of": "من",
+        "entries": "إدخالات"
+    },
     "ALERT": 
     {
         "TITLE": "هل أنت متأكد؟",

@@ -193,6 +193,13 @@
     "createdDate": "Fecha de creación",
     "updatedDate": "Fecha de actualización",
     "actions": "Acciones",
+    "PAGINATION": 
+    {
+        "showing": "Mostrando",
+        "to": "a",
+        "of": "de",
+        "entries": "entradas"
+    },
     "ALERT": 
     {
         "TITLE": "¿Estás seguro?",

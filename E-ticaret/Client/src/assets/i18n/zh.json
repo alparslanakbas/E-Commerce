@@ -193,6 +193,13 @@
     "createdDate": "创建日期",
     "updatedDate": "更新日期",
     "actions": "操作",
+    "PAGINATION": 
+    {
+        "showing": "显示",
+        "to": "到",
+        "of": "的",
+        "entries": "条目"
+    },
     "ALERT": 
     {
         "TITLE": "你确定吗？",

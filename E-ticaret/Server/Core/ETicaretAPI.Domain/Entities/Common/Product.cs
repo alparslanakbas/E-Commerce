@@ -7,9 +7,9 @@ namespace ETicaretAPI.Domain.Entities.Common
 {
     public sealed class Product : BaseEntity
     {
-        public string Name { get; init; } = null!;
-        public int Stock { get; init; }
-        public float Price { get; init; }
-        public ICollection<Order>? Orders { get; init; }
+        public string Name { get; set; }
+        public int Stock { get; set; }
+        public float Price { get; set; }
+        public ICollection<Order>? Orders { get; set; }
     }
 }

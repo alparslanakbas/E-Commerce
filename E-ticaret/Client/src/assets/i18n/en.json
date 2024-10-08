@@ -193,6 +193,13 @@
     "createdDate": "Created Date",
     "updatedDate": "Updated Date",
     "actions": "Actions",
+    "PAGINATION": 
+    {
+        "showing": "Showing",
+        "to": "to",
+        "of": "of",
+        "entries": "entries"
+    },
     "ALERT": 
     {
         "TITLE": "Are you sure?",

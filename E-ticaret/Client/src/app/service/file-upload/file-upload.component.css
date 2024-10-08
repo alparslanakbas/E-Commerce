@@ -1,0 +1,29 @@
+/* Align label and button next to each other */
+.file-upload-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .product-image-label {
+    margin-right: 10px;
+  }
+  
+  /* Remove the blue outline from the button when focused */
+  button:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  /* Optional styling for button to fit with dark theme */
+  button.btn-outline-primary {
+    background-color: transparent;
+    border: 1px solid #1d72b8; /* Adjust border color to fit your theme */
+    color: #1d72b8;
+  }
+  
+  button.btn-outline-primary:hover {
+    background-color: #1d72b8;
+    color: white;
+  }
+  

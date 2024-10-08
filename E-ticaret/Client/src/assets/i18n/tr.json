@@ -193,6 +193,13 @@
     "createdDate": "Oluşturulma Tarihi",
     "updatedDate": "Güncellenme Tarihi",
     "actions": "İşlemler",
+    "PAGINATION": 
+    {
+        "showing": "Gösteriliyor",
+        "to": "-",
+        "of": "toplam",
+        "entries": "kayıttan"
+    },
     "ALERT": 
     {
         "TITLE": "Emin misiniz?",

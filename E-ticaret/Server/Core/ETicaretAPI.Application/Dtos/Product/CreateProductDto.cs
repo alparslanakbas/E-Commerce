@@ -6,5 +6,5 @@ using System.Threading.Tasks;
 
 namespace ETicaretAPI.Application.Dtos.Product
 {
-    public record CreateProductDto(string? Name, int Stock, float Price, DateTime CreatedDate);
+    public record CreateProductDto(string Name, int Stock, float Price, DateTime CreatedDate);
 }

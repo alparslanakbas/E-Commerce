@@ -193,6 +193,13 @@
     "createdDate": "Data de criação",
     "updatedDate": "Data de atualização",
     "actions": "Ações",
+    "PAGINATION": 
+    {
+        "showing": "Mostrando",
+        "to": "a",
+        "of": "de",
+        "entries": "entradas"
+    },
     "ALERT": 
     {
         "TITLE": "Você tem certeza?",

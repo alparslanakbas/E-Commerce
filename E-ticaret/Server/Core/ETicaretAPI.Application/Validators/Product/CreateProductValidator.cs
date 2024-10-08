@@ -47,7 +47,7 @@ namespace ETicaretAPI.Application.Validators.Product
                     .WithMessage("0 Değerinin Altında Bir Değer Girilemez.!")
                 .Must(stock => stock % 1 == 0)
                     .WithMessage("Fiyat Tam Sayı Olmalıdır")
-                .InclusiveBetween(1,100000)
+                .InclusiveBetween(1,500000)
                     .WithMessage("Fiyat Aralığı 1 İla 100.000 Aralığında Olmalıdır.! ")
                 ;
 

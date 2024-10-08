@@ -7,136 +7,213 @@
             <span>{{ currentPath | titlecase }}</span>
         </li>
     </ul>
-    <div class="panel border-[#e0e6ed] px-0 pb-1.5 dark:border-[#1b2e4b]">
-        <div class="datatable invoice-table">
-            <div class="mb-4.5 flex flex-col gap-5 px-5 md:flex-row md:items-center md:justify-between">
-                <div class="flex items-center gap-2">
-                    <button type="button" class="btn btn-danger gap-2" (click)="deleteRow()">
-                        <icon-trash-lines />
-                        {{ 'delete' | translate }}
-                    </button>
-                    <button (click)="modal21.open()" class="btn btn-primary gap-2">
-                        <icon-plus />
-                        {{ 'add_new' | translate }}
-                    </button>
-                    <button type="button" class="btn btn-success btn-sm m-1" (click)="exportTable('csv')">
-                        <icon-file class="h-5 w-5 ltr:mr-2 rtl:ml-2" />
-                        CSV
-                    </button>
-                    <button type="button" class="btn btn-dark btn-sm m-1" (click)="exportTable('txt')">
-                        <icon-txt-file class="h-5 w-5 ltr:mr-2 rtl:ml-2" />
-                        TXT
-                    </button>
-                    <button type="button" class="btn btn-info btn-sm m-1" (click)="exportTable('print')">
-                        <icon-printer class="ltr:mr-2 rtl:ml-2" />
-                        PRINT
-                    </button>
-                </div>
-                <div class="flex items-center gap-6 relative">
-                    <div
-                        class="flex h-auto w-auto px-4 flex-col justify-center rounded-full border border-[#e0e6ed] shadow-[1px_2px_12px_0_rgba(31,45,61,0.10)] dark:border-[#1b2e4b]"
-                        style="pointer-events: none"
-                    >
-                        <div class="flex items-center justify-center relative text-xl text-primary sm:text-3xl">
-                            <div [countUp]="totalProductCount" [options]="{ startVal: 0, duration: 7 }"></div>
-                            <span class="ml-2 dark:text-white-dark">
-                                <icon-box [fill]="true" class="h-6 w-6"></icon-box>
-                            </span>
-                        </div>
-                    </div>
-                    <div class="ml-auto">
-                        <input [(ngModel)]="search" type="text" class="form-input" placeholder="{{ 'search' | translate }}" />
-                    </div>
-                </div>
-            </div>
 
-            <ng-datatable
-                #datatablea
-                [rows]="products"
-                [columns]="cols"
-                [hasCheckbox]="true"
-                [sortable]="true"
-                [search]="search"
-                [pageSizeOptions]="[10, 15, 20, 30, 50, 100]"
-                [columnFilter]="true"
-                [cloneHeaderInFooter]="true"
-                [firstArrow]="'firstArrow' | translate"
-                [lastArrow]="'lastArrow' | translate"
-                [noDataContent]="'noDataContent' | translate"
-                [paginationInfo]="paginationInfo"
-                [showNumbers]="true"
-                skin="whitespace-nowrap bh-table-hover"
-                previousArrow='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5 rtl:rotate-180"> <path d="M15 5L9 12L15 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </svg>'
-                nextArrow='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5 rtl:rotate-180"> <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </svg>'
-            >
-                <ng-template slot="invoice" let-value="data">
-                    <a routerLink="/apps/invoice/preview" class="font-semibold text-primary underline hover:no-underline">#{{ value.index }}</a>
-                </ng-template>
-                <ng-template slot="name" let-value="data">
-                    <div class="flex items-center font-semibold">
-                        <div class="w-max rounded-full bg-white-dark/30 p-0.5 ltr:mr-2 rtl:ml-2">
-                            <img class="h-8 w-8 rounded-full object-cover" src="https://via.placeholder.com/90x90?text=Ornek" />
-                        </div>
-                        {{ value.name }}
-                    </div>
-                </ng-template>
-                <ng-template slot="amount" let-value="data">
-                    <div class="font-semibold ltr:text-right rtl:text-left">${{ value.amount }}</div>
-                </ng-template>
-                <ng-template slot="status" let-value="data">
-                    <span class="badge" [ngClass]="[value.status.toLowerCase() === 'paid' ? 'badge-outline-success' : 'badge-outline-danger']">{{
-                        value.status
-                    }}</span>
-                </ng-template>
-                <ng-template slot="actions" let-value="data">
-                    <div class="flex items-center justify-center gap-4">
-                        <a routerLink="/apps/invoice/edit" class="hover:text-info">
-                            <icon-edit class="h-4.5 w-4.5" />
-                        </a>
-                        <a routerLink="/apps/invoice/preview" class="hover:text-primary">
-                            <icon-eye />
-                        </a>
-                        <button type="button" class="hover:text-danger" (click)="deleteRow(value.id)">
+    <div class="panel border-[#e0e6ed] px-0 pb-1.5 dark:border-[#1b2e4b]">
+        <div *ngIf="loading" class="flex justify-center items-center min-h-[800px]">
+            <button type="button" class="btn btn-outline-primary ml-4 btn-lg">
+                {{ 'loading' | translate }}
+                <svg
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    class="inline-block shrink-0 animate-[spin_2s_linear_infinite] align-middle ltr:ml-2 rtl:mr-2 ng-star-inserted"
+                >
+                    <line x1="12" y1="2" x2="12" y2="6"></line>
+                    <line x1="12" y1="18" x2="12" y2="22"></line>
+                    <line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line>
+                    <line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line>
+                    <line x1="2" y1="12" x2="6" y2="12"></line>
+                    <line x1="18" y1="12" x2="22" y2="12"></line>
+                    <line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line>
+                    <line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line>
+                </svg>
+            </button>
+        </div>
+
+        <div *ngIf="!loading" class="panel border-[#e0e6ed] px-0 pb-1.5 dark:border-[#1b2e4b]">
+            <div class="datatable invoice-table">
+                <div class="mb-4.5 flex flex-col gap-5 px-5 md:flex-row md:items-center md:justify-between">
+                    <div class="flex items-center gap-2">
+                        <button type="button" class="btn btn-danger gap-2" (click)="deleteRow()">
                             <icon-trash-lines />
+                            {{ 'delete' | translate }}
+                        </button>
+                        <button (click)="modal21.open()" class="btn btn-primary gap-2">
+                            <icon-plus />
+                            {{ 'add_new' | translate }}
+                        </button>
+                        <button type="button" class="btn btn-success btn-sm m-1" (click)="exportTable('csv')">
+                            <icon-file class="h-5 w-5 ltr:mr-2 rtl:ml-2" />
+                            CSV
+                        </button>
+                        <button type="button" class="btn btn-dark btn-sm m-1" (click)="exportTable('txt')">
+                            <icon-txt-file class="h-5 w-5 ltr:mr-2 rtl:ml-2" />
+                            TXT
+                        </button>
+                        <button type="button" class="btn btn-info btn-sm m-1" (click)="exportTable('print')">
+                            <icon-printer class="ltr:mr-2 rtl:ml-2" />
+                            PRINT
                         </button>
                     </div>
-                </ng-template>
-            </ng-datatable>
-        </div>
-    </div>
+                    <div class="flex items-center gap-6 relative">
+                        <div
+                            class="flex h-auto w-auto px-4 flex-col justify-center rounded-full border border-[#e0e6ed] shadow-[1px_2px_12px_0_rgba(31,45,61,0.10)] dark:border-[#1b2e4b]"
+                            style="pointer-events: none"
+                        >
+                            <div class="flex items-center justify-center relative text-xl text-primary sm:text-3xl">
+                                <div [countUp]="totalProductCount" [options]="{ startVal: 0, duration: 7 }"></div>
+                                <span class="ml-2 dark:text-white-dark">
+                                    <icon-box [fill]="true" class="h-6 w-6"></icon-box>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="ml-auto">
+                            <input [(ngModel)]="search" type="text" class="form-input" placeholder="{{ 'search' | translate }}" />
+                        </div>
+                    </div>
+                </div>
 
-    <!-- Product Add Modal -->
-    <div>
-        <ngx-custom-modal #modal21 customClass="modal-top auth-modal">
-            <ng-template #modalHeader>
+                <ng-datatable
+                    #datatablea
+                    [rows]="products"
+                    [columns]="cols"
+                    [hasCheckbox]="true"
+                    [sortable]="true"
+                    [search]="search"
+                    [showPageSize]="true"
+                    [pageSizeOptions]="[10, 15, 20, 30, 50, 100]"
+                    [pageSize]="pageSize"
+                    (pageSizeChange)="onPageSizeChange($event)"
+                    (pageChange)="onPageChange($event)"
+                    [columnFilter]="true"
+                    [cloneHeaderInFooter]="true"
+                    [firstArrow]="'firstArrow' | translate"
+                    [lastArrow]="'lastArrow' | translate"
+                    [noDataContent]="'noDataContent' | translate"
+                    [paginationInfo]="paginationInfo"
+                    [showNumbers]="true"
+                    [totalRows]="totalProductCount"
+                    [showNumbersCount]="10"
+                    [showLastPage]="true"
+                    [isServerMode]="true"
+                    (changeServer)="onChangeServer($event)"
+                    [page]="currentPage"
+                    skin="whitespace-nowrap bh-table-hover"
+                    previousArrow='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5 rtl:rotate-180"> <path d="M15 5L9 12L15 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </svg>'
+                    nextArrow='<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="w-4.5 h-4.5 rtl:rotate-180"> <path d="M9 5L15 12L9 19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/> </svg>'
+                >
+                    <ng-template slot="invoice" let-value="data">
+                        <a routerLink="/apps/invoice/preview" class="font-semibold text-primary underline hover:no-underline">#{{ value.index }}</a>
+                    </ng-template>
+                    <ng-template slot="name" let-value="data">
+                        <div class="flex items-center font-semibold">
+                            <div class="w-max rounded-full bg-white-dark/30 p-0.5 ltr:mr-2 rtl:ml-2">
+                                <img class="h-8 w-8 rounded-full object-cover" src="https://via.placeholder.com/90x90?text=Ornek" />
+                            </div>
+                            {{ value.name }}
+                        </div>
+                    </ng-template>
+                    <ng-template slot="amount" let-value="data">
+                        <div class="font-semibold ltr:text-right rtl:text-left">${{ value.amount }}</div>
+                    </ng-template>
+                    <ng-template slot="status" let-value="data">
+                        <span class="badge" [ngClass]="[value.status.toLowerCase() === 'paid' ? 'badge-outline-success' : 'badge-outline-danger']">{{
+                            value.status
+                        }}</span>
+                    </ng-template>
+                    <ng-template slot="actions" let-value="data">
+                        <div class="flex items-center justify-center gap-4">
+                            <a routerLink="/apps/invoice/edit" class="hover:text-info">
+                                <icon-edit class="h-4.5 w-4.5" />
+                            </a>
+                            <a routerLink="/apps/invoice/preview" class="hover:text-primary">
+                                <icon-eye />
+                            </a>
+                            <button type="button" class="hover:text-danger" (click)="deleteRow(value.id)">
+                                <icon-trash-lines />
+                            </button>
+                        </div>
+                    </ng-template>
+                </ng-datatable>
+            </div>
+        </div>
+
+        <!-- Product Add Modal -->
+        <div>
+            <ngx-custom-modal #modal21 customClass="modal-top auth-modal">
+              <ng-template #modalHeader>
                 <div class="!py-5">{{ 'add_product' | translate }}</div>
-            </ng-template>
-            <ng-template #modalBody>
+              </ng-template>
+              <ng-template #modalBody>
                 <form>
-                    <div class="relative mb-4">
-                        <span class="absolute top-1/2 -translate-y-1/2 dark:text-white-dark ltr:left-3 rtl:right-3">
-                            <icon-box [fill]="true" class="h-6 w-6"></icon-box>
-                        </span>
-                        <input #name type="text" placeholder="{{ 'name' | translate }}" class="form-input ltr:pl-10 rtl:pr-10" />
-                    </div>
-                    <div class="relative mb-4">
-                        <span class="absolute top-1/2 -translate-y-1/2 dark:text-white-dark ltr:left-3 rtl:right-3">
-                            <icon-menu-widgets class="h-6 w-6"></icon-menu-widgets>
-                        </span>
-                        <input #stock type="number" placeholder="{{ 'stock' | translate }}" class="form-input ltr:pl-10 rtl:pr-10" />
-                    </div>
-                    <div class="relative mb-4">
-                        <span class="absolute top-1/2 -translate-y-1/2 dark:text-white-dark ltr:left-3 rtl:right-3">
-                            <icon-dollar-sign-circle [fill]="true" class="h-6 w-6"></icon-dollar-sign-circle>
-                        </span>
-                        <input #price type="text" placeholder="{{ 'price' | translate }}" class="form-input ltr:pl-10 rtl:pr-10" />
-                    </div>
-                    <div class="flex justify-end space-x-3">
-                        <button type="button" (click)="add(name, stock, price)" class="btn btn-primary w-50">{{ 'add' | translate }}</button>
-                        <button type="button" class="btn btn-danger w-50">{{ 'cancel' | translate }}</button>
-                    </div>
+                  <!-- Product Name -->
+                  <div class="relative mb-4">
+                    <span class="absolute top-1/2 -translate-y-1/2 dark:text-white-dark ltr:left-3 rtl:right-3">
+                      <icon-box [fill]="true" class="h-6 w-6"></icon-box>
+                    </span>
+                    <input
+                      [(ngModel)]="product.name"
+                      name="name"
+                      type="text"
+                      placeholder="{{ 'name' | translate }}"
+                      class="form-input ltr:pl-10 rtl:pr-10"
+                    />
+                  </div>
+          
+                  <!-- Product Stock -->
+                  <div class="relative mb-4">
+                    <span class="absolute top-1/2 -translate-y-1/2 dark:text-white-dark ltr:left-3 rtl:right-3">
+                      <icon-menu-widgets class="h-6 w-6"></icon-menu-widgets>
+                    </span>
+                    <input
+                      [(ngModel)]="product.stock"
+                      name="stock"
+                      type="number"
+                      placeholder="{{ 'stock' | translate }}"
+                      class="form-input ltr:pl-10 rtl:pr-10"
+                    />
+                  </div>
+          
+                  <!-- Product Price -->
+                  <div class="relative mb-4">
+                    <span class="absolute top-1/2 -translate-y-1/2 dark:text-white-dark ltr:left-3 rtl:right-3">
+                      <icon-dollar-sign-circle [fill]="true" class="h-6 w-6"></icon-dollar-sign-circle>
+                    </span>
+                    <input
+                      [(ngModel)]="product.price"
+                      name="price"
+                      type="text"
+                      placeholder="{{ 'price' | translate }}"
+                      class="form-input ltr:pl-10 rtl:pr-10"
+                    />
+                  </div>
+          
+                  <!-- File Upload Section -->
+                  <div class="relative mb-4">
+                    <app-file-upload [options]="options"></app-file-upload>
+                  </div>
+          
+                  <!-- Actions -->
+                  <div class="flex justify-end space-x-3">
+                    <button
+                      type="button"
+                      (click)="add()"
+                      class="btn btn-primary w-50">
+                      {{ 'add' | translate }}
+                    </button>
+                    <button type="button" class="btn btn-danger w-50">
+                      {{ 'cancel' | translate }}
+                    </button>
+                  </div>
                 </form>
-            </ng-template>
-        </ngx-custom-modal>
+              </ng-template>
+            </ngx-custom-modal>
+          </div>
+          
     </div>
 </div>
