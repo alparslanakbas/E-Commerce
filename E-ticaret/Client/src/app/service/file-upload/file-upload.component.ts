@@ -33,9 +33,9 @@ export class FileUploadComponent {
           controller: this.options.controller,
           action: this.options.action,
           queryString: this.options.queryString,
-          headers: new HttpHeaders({"responseType": "blob"})
+          headers: new HttpHeaders()
         }, fileData).subscribe(data =>{
-
+            console.log("Resim yükleme başarılı");
         }, (errorResponse: HttpErrorResponse)=>{
           console.log(errorResponse.message);
         });

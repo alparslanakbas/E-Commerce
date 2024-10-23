@@ -5,6 +5,7 @@ using ETicaretAPI.Application.Validators.Product;
 using FluentValidation;
 using ETicaretAPI.Infrastructure.Filters;
 using FluentValidation.AspNetCore;
+using ETicaretAPI.Infrastructure;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,7 +14,8 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
 builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
 {
-    containerBuilder.RegisterModule(new AutofacModule());
+    containerBuilder.RegisterModule(new PersistenceAutofactModule());
+    containerBuilder.RegisterModule(new InfrastructureAutofactModule());
 });
 
 // Add services to the container.

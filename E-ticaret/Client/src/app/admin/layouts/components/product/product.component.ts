@@ -40,8 +40,8 @@ export class ProductComponent implements OnInit {
 
 
     @Output() options: Partial<FileUploadOptions> ={
-        action: "upload",
-        controller: "product",
+        action: "Upload",
+        controller: "Product",
         explanation: "Resimleri seçin",
         accept: ".jpg, .png" 
     }

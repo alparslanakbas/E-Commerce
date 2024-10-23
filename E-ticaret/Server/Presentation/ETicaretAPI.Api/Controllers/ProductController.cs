@@ -5,26 +5,54 @@ using System.Linq.Expressions;
 using System.Net;
 using System.Threading.Tasks;
 using ETicaretAPI.Application.Dtos.Product;
+using ETicaretAPI.Application.Repositories.FileRepo;
+using ETicaretAPI.Application.Repositories.InvoiceFileRepo;
 using ETicaretAPI.Application.Repositories.ProductRepo;
+using ETicaretAPI.Application.Repositories.ProductRepo.ProductImageFileRepo;
 using ETicaretAPI.Application.RequestParameters;
+using ETicaretAPI.Application.Services;
 using ETicaretAPI.Domain.Entities.Common;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ETicaretAPI.Api.Controllers
 {
     [ApiController]
+    
     [Route("api/[controller]/[action]")]
     public class ProductController : ControllerBase
     {
         private readonly IReadProductRepo _readProductRepo;
         private readonly IWriteProductRepo _writeProductRepo;
-        private readonly IWebHostEnvironment _webHostEnvironment;
+        private readonly IFileService _fileService;
+        private readonly IWriteFileRepo _writeFileRepo;
+        private readonly IReadFileRepo _readFileRepo;
+        private readonly IReadProductImageFileRepo _readProductImageFileRepo;
+        private readonly IWriteProductImageFileRepo _writeProductImageFileRepo;
+        private readonly IReadInvoiceRepo _readInvoiceRepo;
+        private readonly IWriteInvoiceRepo _writeInvoiceRepo;
 
-        public ProductController(IReadProductRepo readProductRepo, IWriteProductRepo writeProductRepo, IWebHostEnvironment webHostEnvironment)
+        public ProductController
+            (
+                IReadProductRepo readProductRepo, 
+                IWriteProductRepo writeProductRepo, 
+                IFileService fileService, 
+                IWriteFileRepo writeFileRepo, 
+                IReadFileRepo readFileRepo, 
+                IReadProductImageFileRepo readProductImageFileRepo, 
+                IWriteProductImageFileRepo writeProductImageFileRepo, 
+                IReadInvoiceRepo readInvoiceRepo, 
+                IWriteInvoiceRepo writeInvoiceRepo
+            )
         {
             _readProductRepo = readProductRepo;
             _writeProductRepo = writeProductRepo;
-            _webHostEnvironment = webHostEnvironment;
+            _fileService = fileService;
+            _writeFileRepo = writeFileRepo;
+            _readFileRepo = readFileRepo;
+            _readProductImageFileRepo = readProductImageFileRepo;
+            _writeProductImageFileRepo = writeProductImageFileRepo;
+            _readInvoiceRepo = readInvoiceRepo;
+            _writeInvoiceRepo = writeInvoiceRepo;
         }
 
         [HttpGet]
@@ -125,20 +153,15 @@ namespace ETicaretAPI.Api.Controllers
         [HttpPost]
         public async Task<IActionResult> Upload()
         {
-            string uploadPath = Path.Combine(_webHostEnvironment.WebRootPath, "images/products");
-            
-            if (!Directory.Exists(uploadPath)) Directory.CreateDirectory(uploadPath);
+            var datas= await _fileService.UploadAsync("images/products", Request.Form.Files);
+            await _writeProductImageFileRepo.AddRangeAsync(datas
+                                                            .Select(d => new ProductImageFile()
+                                                            {
+                                                                FileName = d.fileName,
+                                                                Path = d.path,
+                                                            }).ToList());
 
-            Random random = new();
-
-            foreach (IFormFile file in Request.Form.Files)
-            {
-                string fullPath = Path.Combine(uploadPath, $"{random.Next()}{Path.GetExtension(file.FileName)}");
-
-                using FileStream fileStream = new(fullPath, FileMode.Create, FileAccess.Write, FileShare.None, 1024 * 1024, useAsync:false);
-                await file.CopyToAsync(fileStream);
-                await fileStream.FlushAsync();
-            }
+            await _writeProductImageFileRepo.SaveAsync();
             return NoContent();
         }
 

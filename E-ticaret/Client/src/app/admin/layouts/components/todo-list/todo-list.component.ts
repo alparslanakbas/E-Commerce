@@ -64,6 +64,20 @@ projectList: any = [
                 description: 'tablo daki dinamik gelen filtreleme araçları çalışmıyor düzeltilmesi gerek',
                 date: '06.10.2024 Pazar',
             },
+            {
+                projectId: 12,
+                id: 3.1,
+                title: 'Dosya yükleme problem',
+                description: 'dosya yükleme sırasında resimler seçiliyor clientta gözüküyor fakat api de ekleme gerçekleşmiyor. Ürünlere tam manada entegre edilmedi',
+                date: '09.10.2024 Çarşamba',
+            },
+            {
+                projectId: 13,
+                id: 3.2,
+                title: 'Datatable kolon genişleme',
+                description: 'Gelen değer uzun olduğunda tablonun sütunları kapladığı yer kadar genişliyor. Colon sizelar dinamik hale getirilmeli.',
+                date: '09.10.2024 Çarşamba',
+            },
         ],
     },
     {

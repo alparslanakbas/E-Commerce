@@ -1,24 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\Projem\\E-Commerce\\E-ticaret\\Server\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{65135E41-CF70-41C5-B385-C35135E43567}|Presentation\\ETicaretAPI.Api\\ETicaretAPI.Api.csproj|c:\\users\\legol\\onedrive\\masa\u00FCst\u00FC\\projem\\e-commerce\\e-ticaret\\server\\presentation\\eticaretapi.api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65135E41-CF70-41C5-B385-C35135E43567}|Presentation\\ETicaretAPI.Api\\ETicaretAPI.Api.csproj|solutionrelative:presentation\\eticaretapi.api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65135E41-CF70-41C5-B385-C35135E43567}|Presentation\\ETicaretAPI.Api\\ETicaretAPI.Api.csproj|c:\\users\\legol\\onedrive\\masa\u00FCst\u00FC\\projem\\e-commerce\\e-ticaret\\server\\presentation\\eticaretapi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65135E41-CF70-41C5-B385-C35135E43567}|Presentation\\ETicaretAPI.Api\\ETicaretAPI.Api.csproj|solutionrelative:presentation\\eticaretapi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0F2CD803-20F2-426F-9371-8E5692B9120F}|Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj|c:\\users\\legol\\onedrive\\masa\u00FCst\u00FC\\projem\\e-commerce\\e-ticaret\\server\\infrastructure\\eticaretapi.persistence\\repositories\\readrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0F2CD803-20F2-426F-9371-8E5692B9120F}|Infrastructure\\ETicaretAPI.Persistence\\ETicaretAPI.Persistence.csproj|solutionrelative:infrastructure\\eticaretapi.persistence\\repositories\\readrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DAA4EC6C-169E-4332-A457-03D8A4C664A3}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|c:\\users\\legol\\onedrive\\masa\u00FCst\u00FC\\projem\\e-commerce\\e-ticaret\\server\\core\\eticaretapi.application\\repositories\\ireadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DAA4EC6C-169E-4332-A457-03D8A4C664A3}|Core\\ETicaretAPI.Application\\ETicaretAPI.Application.csproj|solutionrelative:core\\eticaretapi.application\\repositories\\ireadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -26,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,55 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\Projem\\E-Commerce\\E-ticaret\\Server\\Presentation\\ETicaretAPI.Api\\Program.cs",
-              "RelativeDocumentMoniker": "Presentation\\ETicaretAPI.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\Projem\\E-Commerce\\E-ticaret\\Server\\Presentation\\ETicaretAPI.Api\\Program.cs",
-              "RelativeToolTip": "Presentation\\ETicaretAPI.Api\\Program.cs",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAADgAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-08T15:39:16.988Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IReadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\Projem\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Application\\Repositories\\IReadRepository.cs",
-              "RelativeDocumentMoniker": "Core\\ETicaretAPI.Application\\Repositories\\IReadRepository.cs",
-              "ToolTip": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\Projem\\E-Commerce\\E-ticaret\\Server\\Core\\ETicaretAPI.Application\\Repositories\\IReadRepository.cs",
-              "RelativeToolTip": "Core\\ETicaretAPI.Application\\Repositories\\IReadRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-06T19:36:47.327Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ReadRepository.cs",
-              "DocumentMoniker": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\Projem\\E-Commerce\\E-ticaret\\Server\\Infrastructure\\ETicaretAPI.Persistence\\Repositories\\ReadRepository.cs",
-              "RelativeDocumentMoniker": "Infrastructure\\ETicaretAPI.Persistence\\Repositories\\ReadRepository.cs",
-              "ToolTip": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\Projem\\E-Commerce\\E-ticaret\\Server\\Infrastructure\\ETicaretAPI.Persistence\\Repositories\\ReadRepository.cs",
-              "RelativeToolTip": "Infrastructure\\ETicaretAPI.Persistence\\Repositories\\ReadRepository.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAAwFAAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T19:54:26.566Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\Projem\\E-Commerce\\E-ticaret\\Server\\Presentation\\ETicaretAPI.Api\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "Presentation\\ETicaretAPI.Api\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\legol\\OneDrive\\Masa\u00FCst\u00FC\\Projem\\E-Commerce\\E-ticaret\\Server\\Presentation\\ETicaretAPI.Api\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "Presentation\\ETicaretAPI.Api\\Controllers\\ProductController.cs",
-              "ViewState": "AQIAAGgAAAAAAAAAAIAwwH8AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-04T19:53:32.535Z",
-              "EditorCaption": ""
             }
           ]
         }
